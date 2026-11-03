@@ -1,0 +1,23 @@
+W1102 07:24:10.752000 37710 .venv/lib/python3.12/site-packages/torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1102 07:24:10.752000 37710 .venv/lib/python3.12/site-packages/torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1102 07:24:10.752000 37710 .venv/lib/python3.12/site-packages/torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+{"head": "ba29c63bbaa130128268b9b65c0a0e4cfd85a38f", "tree": "852ce8296e1c0399bb970a383a0c1fb299443203", "source": "/home/shadeform/vllm-pr-validation-nov1/pr56331", "vllm_import": "/home/shadeform/vllm-pr-validation-nov1/pr56331/vllm/__init__.py", "python": "/home/shadeform/vllm-pr-validation-nov1/pr56331/.venv/bin/python", "torch": "2.14.0+cu130", "cuda_before": false, "tests": ["tests/v1/kv_connector/unit/offloading_connector/test_config.py", "tests/v1/kv_offload/test_file_mapper.py", "tests/v1/kv_offload/tiering/test_fs_tier.py", "tests/v1/kv_offload/tiering/test_obj_tier.py", "tests/v1/kv_offload/test_factory.py", "tests/v1/kv_connector/unit/test_handshake_pp_aggregation.py", "tests/v1/kv_offload/tiering/p2p/test_sessions.py", "tests/v1/kv_offload/cpu/test_capacity.py", "tests/v1/kv_offload/tiering/test_tiering_offloading.py"], "argv": ["/home/shadeform/vllm-pr-validation-nov1/scripts/run_cpu_validation.py", "--source", "/home/shadeform/vllm-pr-validation-nov1/pr56331", "--head", "ba29c63bbaa130128268b9b65c0a0e4cfd85a38f", "--suite", "offloading", "--receipt", "/home/shadeform/vllm-pr-validation-nov1/evidence/cpu-pr56331-receipt.json"], "expected_alias_failure": false, "base_py_sha256": "483e5d894d8c76898dfbd9851d5d71a02ff4775d4bc98e9110da2079e82049f6"}
+/home/shadeform/vllm-pr-validation-nov1/pr56331/.venv/lib/python3.12/site-packages/pytest_asyncio/plugin.py:300: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the "fixture" caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to "function" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+Running 492 items in this shard
+........................................................................ [ 14%]
+........................................................................ [ 29%]
+........................................................................ [ 43%]
+........................................................................ [ 58%]
+........................................................................ [ 73%]
+........................................................................ [ 87%]
+............................................................             [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/_pytest/config/__init__.py:1507
+  /home/shadeform/vllm-pr-validation-nov1/pr56331/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py:1507: PytestAssertRewriteWarning: Module already imported so cannot be rewritten; anyio
+    self._mark_plugins_for_rewrite(hook, disable_autoload)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+492 passed, 1 warning in 172.56s (0:02:52)

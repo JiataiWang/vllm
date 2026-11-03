@@ -1,0 +1,10 @@
+{
+  "source_archive": "pr56689-completed-evidence.tar.gz",
+  "source_sha256": "cbcc4b19e211fe649cd655d7b1f8b5d91eefbee182bba18cf88617e4d9b655fe",
+  "published_archive": "raw-evidence.tar.xz",
+  "published_sha256": "59dfd50d604b404a2cf553f2172f21cc6ee4a7f65ccfbec5738c7f22151ed06f",
+  "uncompressed_tar_sha256": "dd185a4f4a5b2f33c95abe37411f2d39594d5d114c02f9fd874120facb107aba",
+  "tar_contents_identical": true,
+  "published_bytes": 677848,
+  "local_xz_archive": "pr56689-completed-evidence.tar.xz"
+}

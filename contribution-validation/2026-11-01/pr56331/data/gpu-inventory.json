@@ -1,0 +1,11 @@
+{
+  "command": [
+    "nvidia-smi",
+    "--query-gpu=index,uuid,name,driver_version,memory.total",
+    "--format=csv,noheader"
+  ],
+  "returncode": 0,
+  "stdout": "0, GPU-0cc8109e-9c4f-eb6f-9379-df66f71f032c, NVIDIA A100-SXM4-40GB, 580.178.04, 40960 MiB\n1, GPU-46a33459-81fa-9dcf-9ed9-9a9425a4abf5, NVIDIA A100-SXM4-40GB, 580.178.04, 40960 MiB\n2, GPU-578ff5a4-ba53-9afa-62a7-0f5fa921b3b7, NVIDIA A100-SXM4-40GB, 580.178.04, 40960 MiB\n3, GPU-a049b8b0-031a-a816-36af-036fbb15fa9b, NVIDIA A100-SXM4-40GB, 580.178.04, 40960 MiB\n4, GPU-36aca86d-d88e-2763-af0f-7844243707f4, NVIDIA A100-SXM4-40GB, 580.178.04, 40960 MiB\n5, GPU-63a54e17-d900-3b99-c42a-4506beaaa446, NVIDIA A100-SXM4-40GB, 580.178.04, 40960 MiB\n6, GPU-fde0a018-ad1a-bbec-ccf6-50a9f64bd178, NVIDIA A100-SXM4-40GB, 580.178.04, 40960 MiB\n7, GPU-264fc0d9-c23f-c1eb-4fc3-40237af3cebc, NVIDIA A100-SXM4-40GB, 580.178.04, 40960 MiB\n",
+  "stderr": "",
+  "selected_cuda_visible_devices": "7"
+}

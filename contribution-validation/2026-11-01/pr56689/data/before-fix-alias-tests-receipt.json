@@ -1,0 +1,58 @@
+{
+  "head": "fe77d0906be0c38c5e2c575cd61b545a2fa687e4",
+  "tree": "276c1a71f0dab5217e34cf16382d841d1dfa164b",
+  "source": "/home/shadeform/vllm-pr-validation-nov1/base56689",
+  "vllm_import": "/home/shadeform/vllm-pr-validation-nov1/base56689/vllm/__init__.py",
+  "python": "/home/shadeform/vllm-pr-validation-nov1/base56689/.venv/bin/python",
+  "torch": "2.14.0+cu130",
+  "cuda_before": false,
+  "tests": [
+    "/home/shadeform/vllm-pr-validation-nov1/evidence/unchanged-pr56689-tests/test_weight_transfer.py::TestModuleSource"
+  ],
+  "argv": [
+    "/home/shadeform/vllm-pr-validation-nov1/scripts/run_cpu_validation.py",
+    "--source",
+    "/home/shadeform/vllm-pr-validation-nov1/base56689",
+    "--head",
+    "fe77d0906be0c38c5e2c575cd61b545a2fa687e4",
+    "--suite",
+    "aliases",
+    "--alias-test",
+    "/home/shadeform/vllm-pr-validation-nov1/evidence/unchanged-pr56689-tests/test_weight_transfer.py",
+    "--expect-alias-failure",
+    "--receipt",
+    "/home/shadeform/vllm-pr-validation-nov1/evidence/base56689-aliases-receipt.json"
+  ],
+  "expected_alias_failure": true,
+  "base_py_sha256": "483e5d894d8c76898dfbd9851d5d71a02ff4775d4bc98e9110da2079e82049f6",
+  "test_sha256": "1f6ff7e59762611a78ea6f2be3e7e10613570daa345b585e4ab6b6d8118883e3",
+  "pytest_exit_code": 1,
+  "cuda_after": false,
+  "tests_results": [
+    {
+      "nodeid": "evidence/unchanged-pr56689-tests/test_weight_transfer.py::TestModuleSource::test_metadata_agrees_with_both_modes",
+      "outcome": "passed",
+      "duration": 0.0009350790001008136
+    },
+    {
+      "nodeid": "evidence/unchanged-pr56689-tests/test_weight_transfer.py::TestModuleSource::test_tied_names_are_transferred_each_round[full-False]",
+      "outcome": "failed",
+      "duration": 0.0019987809996564465
+    },
+    {
+      "nodeid": "evidence/unchanged-pr56689-tests/test_weight_transfer.py::TestModuleSource::test_tied_names_are_transferred_each_round[full-True]",
+      "outcome": "failed",
+      "duration": 0.0008849860000736953
+    },
+    {
+      "nodeid": "evidence/unchanged-pr56689-tests/test_weight_transfer.py::TestModuleSource::test_tied_names_are_transferred_each_round[local-False]",
+      "outcome": "failed",
+      "duration": 0.0008779560002949438
+    },
+    {
+      "nodeid": "evidence/unchanged-pr56689-tests/test_weight_transfer.py::TestModuleSource::test_tied_names_are_transferred_each_round[local-True]",
+      "outcome": "failed",
+      "duration": 0.0008182840001609293
+    }
+  ]
+}

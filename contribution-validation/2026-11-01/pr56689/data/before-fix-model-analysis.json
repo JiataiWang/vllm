@@ -1,0 +1,34 @@
+{
+  "initial_A": {
+    "parameter_hashes_match": true,
+    "max_prompt_logprob_delta": 0.0,
+    "max_all_token_logprob_delta": 0.0,
+    "continuation_token_ids_match": true,
+    "all_captured_logprobs_exact": true,
+    "prompt_token_ids_exact": true
+  },
+  "updated_B": {
+    "parameter_hashes_match": false,
+    "max_prompt_logprob_delta": 2.0645949840545654,
+    "max_all_token_logprob_delta": 2.0912771224975586,
+    "continuation_token_ids_match": true,
+    "all_captured_logprobs_exact": false,
+    "prompt_token_ids_exact": true
+  },
+  "restored_A": {
+    "parameter_hashes_match": true,
+    "max_prompt_logprob_delta": 0.0,
+    "max_all_token_logprob_delta": 0.0,
+    "continuation_token_ids_match": true,
+    "all_captured_logprobs_exact": true,
+    "prompt_token_ids_exact": true
+  },
+  "negative_B_vs_A": {
+    "parameter_hashes_match": false,
+    "max_prompt_logprob_delta": 4.947877466678619,
+    "max_all_token_logprob_delta": 4.947877466678619,
+    "continuation_token_ids_match": true,
+    "all_captured_logprobs_exact": false,
+    "prompt_token_ids_exact": true
+  }
+}

@@ -1,0 +1,36 @@
+/home/shadeform/vllm-pr-validation-nov1/pr56689/.venv/lib/python3.12/site-packages/pytest_asyncio/plugin.py:300: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the "fixture" caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to "function" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+Running 140 items in this shard
+......................ssss.sssss.s..ss.ssss............................. [ 51%]
+.......ss..........ss........................sssssssssssssssssssssss     [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/distributed/test_weight_transfer.py:381: Need at least 1 GPU for this test
+SKIPPED [1] tests/distributed/test_weight_transfer.py:402: Need at least 1 GPU for this test
+SKIPPED [2] tests/distributed/test_weight_transfer.py:574: Need at least 2 GPUs to run NCCL weight transfer test.
+SKIPPED [1] tests/distributed/test_weight_transfer.py:769: Need at least 1 GPU for this test
+SKIPPED [1] tests/distributed/test_weight_transfer.py:789: Need at least 1 GPU for this test
+SKIPPED [1] tests/distributed/test_weight_transfer.py:806: Need at least 1 GPU for this test
+SKIPPED [1] tests/distributed/test_weight_transfer.py:823: Need at least 1 GPU for this test
+SKIPPED [1] tests/distributed/test_weight_transfer.py:840: Need at least 1 GPU for this test
+SKIPPED [1] tests/distributed/test_weight_transfer.py:873: Need at least 1 GPU for this test
+SKIPPED [1] tests/distributed/test_weight_transfer.py:926: Need at least 1 GPU for this test
+SKIPPED [1] tests/distributed/test_weight_transfer.py:954: Need at least 1 GPU for this test
+SKIPPED [1] tests/distributed/test_weight_transfer.py:1003: Need at least 1 GPU for this test
+SKIPPED [2] tests/distributed/test_weight_transfer.py:1167: Need at least 1 GPU to run IPC weight transfer test.
+SKIPPED [1] tests/distributed/test_weight_transfer.py:1212: Need at least 1 GPU for this test
+SKIPPED [1] tests/distributed/test_weight_transfer.py:1620: Need at least 1 GPU (CUDA IPC handles).
+SKIPPED [1] tests/distributed/test_weight_transfer.py:1647: Need at least 1 GPU (CUDA IPC handles).
+SKIPPED [1] tests/distributed/test_weight_transfer.py:1863: Need at least 1 GPU (NCCL broadcast / CUDA stream).
+SKIPPED [1] tests/distributed/test_weight_transfer.py:1889: Need at least 1 GPU (NCCL broadcast / CUDA stream).
+SKIPPED [1] tests/distributed/test_weight_transfer.py:2388: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [5] tests/distributed/test_weight_transfer.py:2400: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [1] tests/distributed/test_weight_transfer.py:2441: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [1] tests/distributed/test_weight_transfer.py:2459: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [1] tests/distributed/test_weight_transfer.py:2500: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [6] tests/distributed/test_weight_transfer.py:2547: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [4] tests/distributed/test_weight_transfer.py:2567: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [3] tests/distributed/test_weight_transfer.py:2577: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [1] tests/distributed/test_weight_transfer.py:2598: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+97 passed, 43 skipped in 43.62s

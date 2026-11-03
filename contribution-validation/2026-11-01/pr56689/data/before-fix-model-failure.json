@@ -1,0 +1,21 @@
+{
+  "status": "bug_reproduced",
+  "changed_vs_B": [
+    {
+      "rank": 2,
+      "name": "lm_head.weight"
+    },
+    {
+      "rank": 3,
+      "name": "lm_head.weight"
+    }
+  ],
+  "comparison": {
+    "parameter_hashes_match": false,
+    "max_prompt_logprob_delta": 2.0645949840545654,
+    "max_all_token_logprob_delta": 2.0912771224975586,
+    "continuation_token_ids_match": true,
+    "all_captured_logprobs_exact": false,
+    "prompt_token_ids_exact": true
+  }
+}

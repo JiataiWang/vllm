@@ -1,0 +1,2497 @@
+{
+  "head": "ba29c63bbaa130128268b9b65c0a0e4cfd85a38f",
+  "tree": "852ce8296e1c0399bb970a383a0c1fb299443203",
+  "source": "/home/shadeform/vllm-pr-validation-nov1/pr56331",
+  "vllm_import": "/home/shadeform/vllm-pr-validation-nov1/pr56331/vllm/__init__.py",
+  "python": "/home/shadeform/vllm-pr-validation-nov1/pr56331/.venv/bin/python",
+  "torch": "2.14.0+cu130",
+  "cuda_before": false,
+  "tests": [
+    "tests/v1/kv_connector/unit/offloading_connector/test_config.py",
+    "tests/v1/kv_offload/test_file_mapper.py",
+    "tests/v1/kv_offload/tiering/test_fs_tier.py",
+    "tests/v1/kv_offload/tiering/test_obj_tier.py",
+    "tests/v1/kv_offload/test_factory.py",
+    "tests/v1/kv_connector/unit/test_handshake_pp_aggregation.py",
+    "tests/v1/kv_offload/tiering/p2p/test_sessions.py",
+    "tests/v1/kv_offload/cpu/test_capacity.py",
+    "tests/v1/kv_offload/tiering/test_tiering_offloading.py"
+  ],
+  "argv": [
+    "/home/shadeform/vllm-pr-validation-nov1/scripts/run_cpu_validation.py",
+    "--source",
+    "/home/shadeform/vllm-pr-validation-nov1/pr56331",
+    "--head",
+    "ba29c63bbaa130128268b9b65c0a0e4cfd85a38f",
+    "--suite",
+    "offloading",
+    "--receipt",
+    "/home/shadeform/vllm-pr-validation-nov1/evidence/cpu-pr56331-receipt.json"
+  ],
+  "expected_alias_failure": false,
+  "base_py_sha256": "483e5d894d8c76898dfbd9851d5d71a02ff4775d4bc98e9110da2079e82049f6",
+  "pytest_exit_code": 0,
+  "cuda_after": false,
+  "tests_results": [
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_runtime_quantization_overrides_isolate_model_identity[quantization-fp8]",
+      "outcome": "passed",
+      "duration": 0.002605829000003723
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_runtime_quantization_overrides_isolate_model_identity[quantization_config-value1]",
+      "outcome": "passed",
+      "duration": 0.0018788470001709356
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_runtime_quantization_overrides_isolate_model_identity[quantization_config-value2]",
+      "outcome": "passed",
+      "duration": 0.002332280999780778
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_multimodal_projector_settings_isolate_model_identity",
+      "outcome": "passed",
+      "duration": 0.002167604999613104
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_model_config_changes_isolate_persisted_blocks[path0-2.0]",
+      "outcome": "passed",
+      "duration": 0.005224778999945556
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_model_config_changes_isolate_persisted_blocks[path1-20000.0]",
+      "outcome": "passed",
+      "duration": 0.004996131000098103
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_model_config_changes_isolate_persisted_blocks[path2-0.5]",
+      "outcome": "passed",
+      "duration": 0.004989291999663692
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_model_config_changes_isolate_persisted_blocks[path3-value3]",
+      "outcome": "passed",
+      "duration": 0.004996580999886646
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_model_config_changes_isolate_persisted_blocks[path4-32]",
+      "outcome": "passed",
+      "duration": 0.005215638999743533
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_model_dtype_isolates_blocks_with_the_same_kv_dtype",
+      "outcome": "passed",
+      "duration": 0.00502099300001646
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_metadata_and_mapping_order_preserve_model_identity",
+      "outcome": "passed",
+      "duration": 0.002234258000044065
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_engine_propagates_snapshot_after_model_loading_and_auto_fit",
+      "outcome": "passed",
+      "duration": 0.009439137000299525
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_engine_snapshots_identity_before_model_loading[native]",
+      "outcome": "passed",
+      "duration": 0.00351527700013321
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_engine_snapshots_identity_before_model_loading[mixed-multi]",
+      "outcome": "passed",
+      "duration": 0.00302947199998016
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_engine_snapshots_identity_before_model_loading[nested-native]",
+      "outcome": "passed",
+      "duration": 0.0030055020001782395
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_engine_snapshots_identity_before_model_loading[no-connector]",
+      "outcome": "passed",
+      "duration": 0.0025474179997218016
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_engine_snapshots_identity_before_model_loading[nixl-with-unrelated-extra-config]",
+      "outcome": "passed",
+      "duration": 0.0025771179998628213
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_engine_snapshots_identity_before_model_loading[lmcache]",
+      "outcome": "passed",
+      "duration": 0.002661221999915142
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_engine_snapshots_identity_before_model_loading[nested-unrelated]",
+      "outcome": "passed",
+      "duration": 0.0027135420000377053
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_longrope_runtime_choice_changes_keys_and_persistent_identity",
+      "outcome": "passed",
+      "duration": 0.0371624790000169
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_worker_kv_bytes_preserves_tensor_layout[False]",
+      "outcome": "passed",
+      "duration": 0.0017150909998235875
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_worker_kv_bytes_preserves_tensor_layout[True]",
+      "outcome": "passed",
+      "duration": 0.0017047410001396202
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_offloading_skips_scratch_group",
+      "outcome": "passed",
+      "duration": 0.004249749000337033
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_hisparse_offloads_only_indexer_group",
+      "outcome": "passed",
+      "duration": 0.0035758069998337305
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_hisparse_partial_group_size_survives_scheduler_flattening",
+      "outcome": "passed",
+      "duration": 0.001903967999624001
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_zero_blocks_skips_tensor_layout_validation",
+      "outcome": "passed",
+      "duration": 0.0016471800004183024
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_prefill_context_parallelism_does_not_scale_group_blocks",
+      "outcome": "passed",
+      "duration": 0.0018337259998588706
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_dcp_scales_attention_but_not_mamba_group_blocks",
+      "outcome": "passed",
+      "duration": 0.0031264449999071076
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_dcp_scales_uniform_type_attention_group_blocks[1-16]",
+      "outcome": "passed",
+      "duration": 0.0016893209999579994
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_dcp_scales_uniform_type_attention_group_blocks[2-32]",
+      "outcome": "passed",
+      "duration": 0.0017787429997042636
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_dcp_scales_uniform_type_group_alongside_mamba[attention-32]",
+      "outcome": "passed",
+      "duration": 0.0019165579997206805
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_dcp_scales_uniform_type_group_alongside_mamba[mamba-16]",
+      "outcome": "passed",
+      "duration": 0.0018945480001093529
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_group_carries_the_chunks_the_tier_keeps_per_request[kv_cache_spec0-None]",
+      "outcome": "passed",
+      "duration": 0.001695972000106849
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_group_carries_the_chunks_the_tier_keeps_per_request[kv_cache_spec1-None]",
+      "outcome": "passed",
+      "duration": 0.0016414890001215099
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_group_carries_the_chunks_the_tier_keeps_per_request[kv_cache_spec2-None]",
+      "outcome": "passed",
+      "duration": 0.001664271000208828
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_group_carries_the_chunks_the_tier_keeps_per_request[kv_cache_spec3-1]",
+      "outcome": "passed",
+      "duration": 0.0016211789998124004
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_group_carries_the_chunks_the_tier_keeps_per_request[kv_cache_spec4-8]",
+      "outcome": "passed",
+      "duration": 0.0016043880000324862
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_group_carries_the_chunks_the_tier_keeps_per_request[kv_cache_spec5-None]",
+      "outcome": "passed",
+      "duration": 0.0016186900002139737
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_group_carries_the_chunks_the_tier_keeps_per_request[kv_cache_spec6-8]",
+      "outcome": "passed",
+      "duration": 0.001595768999777647
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_model_config_carries_the_longest_request",
+      "outcome": "passed",
+      "duration": 0.001624789999823406
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_preserves_data_parallel_config",
+      "outcome": "passed",
+      "duration": 0.0016689209996911814
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_resolves_heterogeneous_hybrid_block_sizes",
+      "outcome": "passed",
+      "duration": 0.0017300819999945816
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_enabled_for_pure_mla_tp_mp_single_node[v1-2]",
+      "outcome": "passed",
+      "duration": 0.0019636989995888143
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_enabled_for_pure_mla_tp_mp_single_node[v1-4]",
+      "outcome": "passed",
+      "duration": 0.0019607290000749344
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_enabled_for_pure_mla_tp_mp_single_node[v1-8]",
+      "outcome": "passed",
+      "duration": 0.002033272000062425
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_enabled_for_pure_mla_tp_mp_single_node[v2-2]",
+      "outcome": "passed",
+      "duration": 0.001973410000118747
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_enabled_for_pure_mla_tp_mp_single_node[v2-4]",
+      "outcome": "passed",
+      "duration": 0.0020413520001056895
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_enabled_for_pure_mla_tp_mp_single_node[v2-8]",
+      "outcome": "passed",
+      "duration": 0.0020097309998163837
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_enabled_for_swa_mla[2]",
+      "outcome": "passed",
+      "duration": 0.0018616459997247148
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_enabled_for_swa_mla[4]",
+      "outcome": "passed",
+      "duration": 0.001874887000212766
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_dsv4_flash[2]",
+      "outcome": "passed",
+      "duration": 0.0024272940004266275
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_dsv4_flash[4]",
+      "outcome": "passed",
+      "duration": 0.0024032219998844084
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_dsv4_flash[8]",
+      "outcome": "passed",
+      "duration": 0.0024881459999051003
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_dsv3_2[2]",
+      "outcome": "passed",
+      "duration": 0.0019524790000104986
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_dsv3_2[4]",
+      "outcome": "passed",
+      "duration": 0.002032752000104665
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_dsv3_2[8]",
+      "outcome": "passed",
+      "duration": 0.0019449779997557926
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_enabled_for_uniform_wrapper_mla",
+      "outcome": "passed",
+      "duration": 0.0021045640000920685
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_excludes_unproven_cache_shapes[hidden-state]",
+      "outcome": "passed",
+      "duration": 0.0018825669999387173
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_excludes_unproven_cache_shapes[mla-full-hybrid]",
+      "outcome": "passed",
+      "duration": 0.0019507789997987857
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_excludes_unproven_cache_shapes[mla-mamba-hybrid]",
+      "outcome": "passed",
+      "duration": 0.0020112310003241873
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_supported_cache_shapes[sliding-window-mla]",
+      "outcome": "passed",
+      "duration": 0.0017908449999595177
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_supported_cache_shapes[uniform-wrapper]",
+      "outcome": "passed",
+      "duration": 0.002139015000011568
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_supported_cache_shapes[multi-group-mla]",
+      "outcome": "passed",
+      "duration": 0.001970651000192447
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_for_dsa_style_groups[uniform-mla-indexer]",
+      "outcome": "passed",
+      "duration": 0.0029048290002720023
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_for_dsa_style_groups[uniform-mla-fa]",
+      "outcome": "passed",
+      "duration": 0.002453963999869302
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_parallel_gate[tp1]",
+      "outcome": "passed",
+      "duration": 0.0020996439998270944
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_parallel_gate[use-mla-false]",
+      "outcome": "passed",
+      "duration": 0.0020350919999145844
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_parallel_gate[pp2]",
+      "outcome": "passed",
+      "duration": 0.0019176589999005955
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_parallel_gate[pcp2]",
+      "outcome": "passed",
+      "duration": 0.001993979999951989
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_parallel_gate[dcp2]",
+      "outcome": "passed",
+      "duration": 0.001974130999769841
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_parallel_gate[world-ne-tp]",
+      "outcome": "passed",
+      "duration": 0.0019216489999962505
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_parallel_gate[ray]",
+      "outcome": "passed",
+      "duration": 0.0019316989996696066
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_parallel_gate[uni]",
+      "outcome": "passed",
+      "duration": 0.001897186999940459
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_parallel_gate[class]",
+      "outcome": "passed",
+      "duration": 0.0019197579999854497
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_replicated_layout_parallel_gate[multi-node]",
+      "outcome": "passed",
+      "duration": 0.0020468620000428928
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_parallelism_agnostic_for_single_full_attention_group",
+      "outcome": "passed",
+      "duration": 0.0016774410000834905
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_parallelism_agnostic_excluded[kv_cache_groups0]",
+      "outcome": "passed",
+      "duration": 0.0015825780001250678
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_parallelism_agnostic_excluded[kv_cache_groups1]",
+      "outcome": "passed",
+      "duration": 0.0015971289999470173
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_parallelism_agnostic_excluded[kv_cache_groups2]",
+      "outcome": "passed",
+      "duration": 0.001807243999792263
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_layout_gate[mla-latent]",
+      "outcome": "passed",
+      "duration": 0.002369433000239951
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_layout_gate[attention-hybrid]",
+      "outcome": "passed",
+      "duration": 0.002271687999837013
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_layout_gate[swa-mla]",
+      "outcome": "passed",
+      "duration": 0.00222215799976766
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_layout_gate[mamba-hybrid]",
+      "outcome": "passed",
+      "duration": 0.002360661000238906
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_layout_gate[uniform-mla-wrapper]",
+      "outcome": "passed",
+      "duration": 0.0023687509997216694
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_layout_gate[uniform-uncertifiable-inner]",
+      "outcome": "passed",
+      "duration": 0.002302299999882962
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_uncertifiable_canonical_layout_resets_replication[swa]",
+      "outcome": "passed",
+      "duration": 0.002568557999893528
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_uncertifiable_canonical_layout_resets_replication[compressed-mla]",
+      "outcome": "passed",
+      "duration": 0.0026343200001974765
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_layout_certifies_v2_model_runner",
+      "outcome": "passed",
+      "duration": 0.002180276000217418
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_mla_dsa_rows_are_tp_independent[False-1]",
+      "outcome": "passed",
+      "duration": 0.002194646000134526
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_mla_dsa_rows_are_tp_independent[False-2]",
+      "outcome": "passed",
+      "duration": 0.002712294000048132
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_mla_dsa_rows_are_tp_independent[False-4]",
+      "outcome": "passed",
+      "duration": 0.0019793599999502476
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_mla_dsa_rows_are_tp_independent[True-1]",
+      "outcome": "passed",
+      "duration": 0.0022226770001907425
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_mla_dsa_rows_are_tp_independent[True-2]",
+      "outcome": "passed",
+      "duration": 0.0023084010003913136
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_canonical_mla_dsa_rows_are_tp_independent[True-4]",
+      "outcome": "passed",
+      "duration": 0.0023001599997769517
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_parallelism_agnostic_disabled_on_v2_model_runner",
+      "outcome": "passed",
+      "duration": 0.001563516999794956
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_accepts_blocks_per_chunk_for_heterogeneous_groups",
+      "outcome": "passed",
+      "duration": 0.0017197820002365916
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_block_size_and_blocks_per_chunk_are_mutually_exclusive",
+      "outcome": "passed",
+      "duration": 0.0015527870000369148
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/offloading_connector/test_config.py::test_blocks_per_chunk_must_be_positive",
+      "outcome": "passed",
+      "duration": 0.001589788000273984
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_get_file_name_full_structure",
+      "outcome": "passed",
+      "duration": 0.0010948730000563955
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_get_run_config_fields",
+      "outcome": "passed",
+      "duration": 0.001115924000259838
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_persistent_namespace_requires_model_identity[None]",
+      "outcome": "passed",
+      "duration": 0.0011529460002748237
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_persistent_namespace_requires_model_identity[]",
+      "outcome": "passed",
+      "duration": 0.0010441710001032334
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_model_identity_isolates_the_same_token_block",
+      "outcome": "passed",
+      "duration": 0.0017178120001517527
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_get_config_file_path",
+      "outcome": "passed",
+      "duration": 0.001061122000010073
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_hybrid_file_identity_uses_resolved_tokens_per_hash",
+      "outcome": "passed",
+      "duration": 0.00106237299996792
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_parallel_agnostic_collapses_namespace_when_config_allows",
+      "outcome": "passed",
+      "duration": 0.0010920530003204476
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_parallel_agnostic_ignored_when_config_disallows",
+      "outcome": "passed",
+      "duration": 0.0010665419999895676
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_namespace_kept_without_parallel_agnostic_opt_in",
+      "outcome": "passed",
+      "duration": 0.001142724999681377
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_parallel_agnostic_separates_persistent_layouts",
+      "outcome": "passed",
+      "duration": 0.0014098329997977999
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_canonical_layout_changes_storage_namespace",
+      "outcome": "passed",
+      "duration": 0.0015965590000632801
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_replicated_layout_collapses_parallel_identity",
+      "outcome": "passed",
+      "duration": 0.001456873999813979
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_replicated_layout_requires_caller_opt_in",
+      "outcome": "passed",
+      "duration": 0.0014266529997257749
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_non_replicated_keeps_parallel_identity",
+      "outcome": "passed",
+      "duration": 0.0011140940000586852
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_replicated_and_parallelism_agnostic_separate_layouts",
+      "outcome": "passed",
+      "duration": 0.0013878629997634562
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_file_mapper.py::test_replicated_layout_run_config_tp_invariant",
+      "outcome": "passed",
+      "duration": 0.0014525350002259074
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_lookup_empty_tier",
+      "outcome": "passed",
+      "duration": 0.010988569000346615
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_legacy_blocks_are_not_reused_without_model_identity",
+      "outcome": "passed",
+      "duration": 0.32968540699994264
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_creates_file_and_lookup_succeeds",
+      "outcome": "passed",
+      "duration": 0.056510505999995075
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_accepts_block_published_by_another_writer",
+      "outcome": "passed",
+      "duration": 0.11257003599985183
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_then_load_roundtrip",
+      "outcome": "passed",
+      "duration": 1.1440088829999695
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_invalid_path_raises_at_construction",
+      "outcome": "passed",
+      "duration": 0.02437491000000591
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_invalid_locality_raises_at_construction[local]",
+      "outcome": "passed",
+      "duration": 0.012575493999975151
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_invalid_locality_raises_at_construction[]",
+      "outcome": "passed",
+      "duration": 0.011566338000193355
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_factory_forwards_locality_to_fs_tier",
+      "outcome": "passed",
+      "duration": 0.016924388999996154
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_failed_load_missing_file",
+      "outcome": "passed",
+      "duration": 0.0016668860002937436
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_multiple_jobs_tracked_independently",
+      "outcome": "passed",
+      "duration": 0.07872779700028332
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_multi_block_job_partial_failure",
+      "outcome": "passed",
+      "duration": 0.11640439900020283
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_shutdown_discards_pending_tasks",
+      "outcome": "passed",
+      "duration": 0.37636209599986614
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_load_data_integrity[True-0]",
+      "outcome": "passed",
+      "duration": 0.07052573400005713
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_load_data_integrity[True-1]",
+      "outcome": "passed",
+      "duration": 0.3583875839999564
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_load_data_integrity[True-2]",
+      "outcome": "passed",
+      "duration": 0.6707999289997133
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_load_data_integrity[True-5]",
+      "outcome": "passed",
+      "duration": 1.4677417999996578
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_load_data_integrity[False-0]",
+      "outcome": "passed",
+      "duration": 0.11672933499994542
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_load_data_integrity[False-1]",
+      "outcome": "passed",
+      "duration": 0.39608570499967755
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_load_data_integrity[False-2]",
+      "outcome": "passed",
+      "duration": 0.7539894450001157
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_load_data_integrity[False-5]",
+      "outcome": "passed",
+      "duration": 2.0035199189997
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_load_roundtrip_without_o_direct",
+      "outcome": "passed",
+      "duration": 0.5104015339998114
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_wait_idle_blocks_until_tasks_complete",
+      "outcome": "passed",
+      "duration": 0.2022569939999812
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_batch_lookup_c_extension",
+      "outcome": "passed",
+      "duration": 0.0009657199998400756
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_batch_lookup_dispatch[True]",
+      "outcome": "passed",
+      "duration": 0.038440617000105703
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_batch_lookup_dispatch[False]",
+      "outcome": "passed",
+      "duration": 0.05438696700002765
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_out_of_bounds_block_id_smoke[True]",
+      "outcome": "passed",
+      "duration": 0.001734634000058577
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_out_of_bounds_block_id_smoke[False]",
+      "outcome": "passed",
+      "duration": 0.0036868510001113464
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_failed_load_corrects_verdict_and_removes_corrupt_file[True]",
+      "outcome": "passed",
+      "duration": 1.0544158469997456
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_failed_load_corrects_verdict_and_removes_corrupt_file[False]",
+      "outcome": "passed",
+      "duration": 1.0849764449999384
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_failed_load_after_abort_does_not_break_newer_probe",
+      "outcome": "passed",
+      "duration": 0.05089705199998207
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_batched_partial_load_failure_keeps_loaded_blocks[True]",
+      "outcome": "passed",
+      "duration": 0.1861931739999818
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_batched_partial_load_failure_keeps_loaded_blocks[False]",
+      "outcome": "passed",
+      "duration": 0.13662638000005245
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_batched_load_first_block_fails_marks_whole_batch[True]",
+      "outcome": "passed",
+      "duration": 0.11475475299994287
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_batched_load_first_block_fails_marks_whole_batch[False]",
+      "outcome": "passed",
+      "duration": 0.12380001499968785
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_transient_load_failure_leaves_file[True]",
+      "outcome": "passed",
+      "duration": 0.06440552399999433
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_transient_load_failure_leaves_file[False]",
+      "outcome": "passed",
+      "duration": 0.06227987300007953
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_successful_store_emits_stored_event",
+      "outcome": "passed",
+      "duration": 0.0788261960001364
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_event_uses_configured_locality[None-None]",
+      "outcome": "passed",
+      "duration": 0.08955640400017728
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_store_event_uses_configured_locality[REMOTE-Locality.REMOTE]",
+      "outcome": "passed",
+      "duration": 0.08779876400012654
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_load_job_emits_no_event",
+      "outcome": "passed",
+      "duration": 0.043804498999634234
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_mixed_job_results_emit_event_only_for_successful_job",
+      "outcome": "passed",
+      "duration": 0.04375643699995635
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_partially_failed_store_emits_no_event",
+      "outcome": "passed",
+      "duration": 0.0010206000001744542
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_events_disabled_by_default",
+      "outcome": "passed",
+      "duration": 0.03608413900019514
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_events_require_global_kv_events_flag",
+      "outcome": "passed",
+      "duration": 0.06919410099999368
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_cascade_store_emits_fs_event_through_tiering_manager",
+      "outcome": "passed",
+      "duration": 0.1477367479997156
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_fs_tier.py::test_fs_tier_cross_tp_round_trip",
+      "outcome": "passed",
+      "duration": 0.19448223000017606
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::test_invalid_locality_raises_at_construction[local]",
+      "outcome": "passed",
+      "duration": 0.0012711989998024364
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::test_invalid_locality_raises_at_construction[]",
+      "outcome": "passed",
+      "duration": 0.0012357470000097237
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierBasic::test_lookup_empty_tier",
+      "outcome": "passed",
+      "duration": 0.010826145000010001
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierBasic::test_store_and_lookup",
+      "outcome": "passed",
+      "duration": 0.011635686999852624
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierBasic::test_lookup_unrelated_key_returns_false",
+      "outcome": "passed",
+      "duration": 0.011669451000216213
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierBasic::test_store_then_load_roundtrip",
+      "outcome": "passed",
+      "duration": 0.002050683000106801
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierBasic::test_multiple_jobs_tracked_independently",
+      "outcome": "passed",
+      "duration": 0.0020297309997658886
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierBasic::test_failed_transfer_reported",
+      "outcome": "passed",
+      "duration": 0.0015567980003652337
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierBasic::test_failed_load_marks_verdict_negative",
+      "outcome": "passed",
+      "duration": 1.0137434190000931
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierBasic::test_pending_transfer_not_returned_until_done",
+      "outcome": "passed",
+      "duration": 0.0014255320002121152
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierBasic::test_drain_jobs_polls_until_transfers_complete",
+      "outcome": "passed",
+      "duration": 0.00363883199997872
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierMultiBlock::test_store_multiple_blocks",
+      "outcome": "passed",
+      "duration": 0.013068838999970467
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierMultiBlock::test_partial_block_lookup",
+      "outcome": "passed",
+      "duration": 0.01305235299969354
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierFailures::test_lookup_exception_returns_false",
+      "outcome": "passed",
+      "duration": 0.012298330999783502
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierFailures::test_submit_store_register_memory_failure_reported_in_get_finished",
+      "outcome": "passed",
+      "duration": 0.004161586000009265
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierFailures::test_submit_load_register_memory_failure_reported_in_get_finished",
+      "outcome": "passed",
+      "duration": 0.0032837270000527496
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierFailures::test_submit_store_make_prepped_xfer_failure_reported_in_get_finished",
+      "outcome": "passed",
+      "duration": 0.003798527000071772
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierFailures::test_failure_and_success_both_returned_by_get_finished",
+      "outcome": "passed",
+      "duration": 0.004056915000091976
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierFailures::test_release_xfer_failure_retries_without_losing_result",
+      "outcome": "passed",
+      "duration": 0.004509017000145832
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierFailures::test_post_transfer_cleanup_failure_does_not_lose_result[release_dlist_handle]",
+      "outcome": "passed",
+      "duration": 0.004233207999732258
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierFailures::test_post_transfer_cleanup_failure_does_not_lose_result[deregister_memory]",
+      "outcome": "passed",
+      "duration": 0.004064439000103448
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierFailures::test_xfer_cleanup_retry_finalizes_parent_job_and_primary_pin",
+      "outcome": "passed",
+      "duration": 0.0047685610002190515
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierShutdown::test_shutdown_clears_in_flight_transfers",
+      "outcome": "passed",
+      "duration": 0.004190299000129016
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestMockObjTierShutdown::test_shutdown_idempotent",
+      "outcome": "passed",
+      "duration": 0.0028387760003170115
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjTierKVEvents::test_successful_store_emits_stored_event",
+      "outcome": "passed",
+      "duration": 0.0019795789999079716
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjTierKVEvents::test_store_event_uses_configured_locality[None-None]",
+      "outcome": "passed",
+      "duration": 0.003246988000228157
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjTierKVEvents::test_store_event_uses_configured_locality[LOCAL-Locality.LOCAL]",
+      "outcome": "passed",
+      "duration": 0.0033375510001860675
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjTierKVEvents::test_mixed_job_results_emit_event_only_for_successful_job",
+      "outcome": "passed",
+      "duration": 0.0029081879997647775
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjTierKVEvents::test_load_job_emits_no_event",
+      "outcome": "passed",
+      "duration": 0.0028308969999670808
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjTierKVEvents::test_failed_transfer_emits_no_event",
+      "outcome": "passed",
+      "duration": 0.002061182000034023
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjTierKVEvents::test_submission_failure_emits_no_event",
+      "outcome": "passed",
+      "duration": 0.0017272220002269023
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjTierKVEvents::test_events_disabled_by_default",
+      "outcome": "passed",
+      "duration": 0.0031735560000925034
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjTierKVEvents::test_events_require_global_kv_events_flag",
+      "outcome": "passed",
+      "duration": 0.0025976020001508004
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjStoreConfig::test_explicit_credentials_included",
+      "outcome": "passed",
+      "duration": 0.0006155390001367778
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjStoreConfig::test_credentials_omitted_when_empty",
+      "outcome": "passed",
+      "duration": 0.0006248489999052254
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjStoreConfig::test_session_token_and_region_included",
+      "outcome": "passed",
+      "duration": 0.000617368000348506
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::TestObjStoreConfig::test_ca_bundle_included_when_set",
+      "outcome": "passed",
+      "duration": 0.0006666010003755218
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::test_obj_tier_replicated_layout_collapses_mapper_identity",
+      "outcome": "passed",
+      "duration": 0.0031965479997779767
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_obj_tier.py::test_obj_tier_namespace_includes_blocks_per_chunk",
+      "outcome": "passed",
+      "duration": 0.0029718000000684697
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_pre_registered_specs_can_be_imported",
+      "outcome": "passed",
+      "duration": 0.0006641499999204825
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_registered",
+      "outcome": "passed",
+      "duration": 0.0006085489999350102
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_tiering_spec_registered",
+      "outcome": "passed",
+      "duration": 0.0006145490001472353
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_get_spec_cls_returns_registered_class",
+      "outcome": "passed",
+      "duration": 0.0006437590000132332
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_get_spec_cls_defaults_to_cpu",
+      "outcome": "passed",
+      "duration": 0.0006319589997474395
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_create_cpu_offloading_spec",
+      "outcome": "passed",
+      "duration": 0.0006648409998888383
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_sizes_normalized_worker_layout",
+      "outcome": "passed",
+      "duration": 0.000658818999909272
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_zero_worker_bytes_produces_empty_cache",
+      "outcome": "passed",
+      "duration": 0.0006731309999850055
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_converts_slots_to_tokens[1]",
+      "outcome": "passed",
+      "duration": 0.0007090310000421596
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_converts_slots_to_tokens[2]",
+      "outcome": "passed",
+      "duration": 0.0007210029998532264
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_converts_slots_to_tokens[4]",
+      "outcome": "passed",
+      "duration": 0.0007172209998316248
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_capacity_accounts_for_tensor_parallel_copies[1]",
+      "outcome": "passed",
+      "duration": 0.0006925009997758025
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_capacity_accounts_for_tensor_parallel_copies[2]",
+      "outcome": "passed",
+      "duration": 0.0013318899996193068
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_capacity_accounts_for_tensor_parallel_copies[4]",
+      "outcome": "passed",
+      "duration": 0.0007077110003592679
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_capacity_dedups_a_replicated_layout",
+      "outcome": "passed",
+      "duration": 0.0007600630001434183
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_mirrors_spec_sizing",
+      "outcome": "passed",
+      "duration": 0.000722622000012052
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_zero_capacity_is_exact_not_unknown",
+      "outcome": "passed",
+      "duration": 0.0006838400004198775
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_capacity_shrinks_when_a_second_group_shares_slots",
+      "outcome": "passed",
+      "duration": 0.0007268419999491016
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_no_token_capacity_without_a_kv_cache_group",
+      "outcome": "passed",
+      "duration": 0.0007477930003005895
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_config_info_no_token_capacity_without_max_model_len",
+      "outcome": "passed",
+      "duration": 0.0007395120001092437
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_tiering_primary_tier_publishes_the_cpu_labels",
+      "outcome": "passed",
+      "duration": 0.0011155649999636807
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_tiering_spec_passes_the_cpu_facts_to_the_primary_tier",
+      "outcome": "passed",
+      "duration": 0.0013936129998910474
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_tiering_spec_aligns_row_size",
+      "outcome": "passed",
+      "duration": 0.0006254390000322019
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_tiering_spec_replicated_sizing_removes_world_factor[2]",
+      "outcome": "passed",
+      "duration": 0.0007355019997703494
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_tiering_spec_replicated_sizing_removes_world_factor[4]",
+      "outcome": "passed",
+      "duration": 0.0006609600000047067
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_tiering_spec_replicated_sizing_removes_world_factor[8]",
+      "outcome": "passed",
+      "duration": 0.0006700509998154303
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_tiering_spec_create_worker_uses_single_slot_for_replicated_layout",
+      "outcome": "passed",
+      "duration": 0.0010637920004228363
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_tiering_spec_create_worker_uses_worker_rank_for_sharded_layout",
+      "outcome": "passed",
+      "duration": 0.0011098529998889717
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_sizing_on_shared_region[2]",
+      "outcome": "passed",
+      "duration": 0.0007166219997998269
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_sizing_on_shared_region[4]",
+      "outcome": "passed",
+      "duration": 0.000685530000282597
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_sizing_on_shared_region[8]",
+      "outcome": "passed",
+      "duration": 0.0007204820003607892
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_disabled_without_shared_region[2-non-cuda-alike]",
+      "outcome": "passed",
+      "duration": 0.0007374629999503668
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_disabled_without_shared_region[2-rocm]",
+      "outcome": "passed",
+      "duration": 0.0006790010002077906
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_disabled_without_shared_region[4-non-cuda-alike]",
+      "outcome": "passed",
+      "duration": 0.0006921809999766992
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_disabled_without_shared_region[4-rocm]",
+      "outcome": "passed",
+      "duration": 0.0007399830001304508
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_disabled_without_shared_region[8-non-cuda-alike]",
+      "outcome": "passed",
+      "duration": 0.0007118809999155928
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_disabled_without_shared_region[8-rocm]",
+      "outcome": "passed",
+      "duration": 0.0007266520001394383
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_layout_truth_matrix[cuda-True]",
+      "outcome": "passed",
+      "duration": 0.0008134250001603505
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_layout_truth_matrix[cuda-False]",
+      "outcome": "passed",
+      "duration": 0.0007054130001051817
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_layout_truth_matrix[rocm-True]",
+      "outcome": "passed",
+      "duration": 0.0008844359999784501
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_layout_truth_matrix[rocm-False]",
+      "outcome": "passed",
+      "duration": 0.0006933009999556816
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_layout_truth_matrix[non-cuda-alike-True]",
+      "outcome": "passed",
+      "duration": 0.0007159420001698891
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_replicated_layout_truth_matrix[non-cuda-alike-False]",
+      "outcome": "passed",
+      "duration": 0.0006785099999433442
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_create_worker_uses_mmap_on_cuda",
+      "outcome": "passed",
+      "duration": 0.0010288410003340687
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_create_worker_uses_tensor_path_without_shared_region[non-cuda-alike]",
+      "outcome": "passed",
+      "duration": 0.0009052280001924373
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_create_worker_uses_tensor_path_without_shared_region[rocm]",
+      "outcome": "passed",
+      "duration": 0.0009341089998997631
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_create_worker_skips_mmap_for_empty_cache",
+      "outcome": "passed",
+      "duration": 0.0008198350001293875
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_create_worker_rank_assignment[True-1-5-4-0]",
+      "outcome": "passed",
+      "duration": 0.0011891260000993498
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_create_worker_rank_assignment[True-0-0-4-0]",
+      "outcome": "passed",
+      "duration": 0.0010924630000772595
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_create_worker_rank_assignment[False-1-5-4-1]",
+      "outcome": "passed",
+      "duration": 0.0011886669999512378
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_create_worker_rank_assignment[False-3-6-4-3]",
+      "outcome": "passed",
+      "duration": 0.0011108539997621847
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_offloading_spec_has_replicated_layout_default",
+      "outcome": "passed",
+      "duration": 0.0006550809998771001
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_offloading_spec_uses_normalized_chunk_geometry",
+      "outcome": "passed",
+      "duration": 0.000668509999741218
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_create_dynamic_spec_receives_config",
+      "outcome": "passed",
+      "duration": 0.0008284549999189039
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_dynamic_load_via_spec_module_path",
+      "outcome": "passed",
+      "duration": 0.0006501200000457175
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_unregistered_spec_without_module_path_raises",
+      "outcome": "passed",
+      "duration": 0.0007793039999342
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_cpu_spec_missing_cpu_bytes_to_use_raises",
+      "outcome": "passed",
+      "duration": 0.0007730530001026636
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_duplicate_registration_raises",
+      "outcome": "passed",
+      "duration": 0.0007170119997681468
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_build_metric_definitions_below_threshold",
+      "outcome": "passed",
+      "duration": 0.0006241480000426236
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_build_metric_definitions_allocation_size_histogram",
+      "outcome": "passed",
+      "duration": 0.0006465989999924204
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/test_factory.py::test_build_metric_definitions_returns_counter_at_threshold",
+      "outcome": "passed",
+      "duration": 0.0006240689999685856
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/test_handshake_pp_aggregation.py::test_engine_unwraps_handshake_metadata_for_legacy_connector",
+      "outcome": "passed",
+      "duration": 0.0008370750001631677
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/test_handshake_pp_aggregation.py::test_engine_rejects_pp_producer_for_legacy_connector",
+      "outcome": "passed",
+      "duration": 0.00087984600031632
+    },
+    {
+      "nodeid": "tests/v1/kv_connector/unit/test_handshake_pp_aggregation.py::test_engine_passes_handshake_metadata_through_for_pp_aware_connector",
+      "outcome": "passed",
+      "duration": 0.0007878340002207551
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_connect_msg_sent_on_creation",
+      "outcome": "passed",
+      "duration": 0.0006633699999838427
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_peer_connect_triggers_add_remote_and_ack",
+      "outcome": "passed",
+      "duration": 0.000780612999733421
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_ack_withheld_until_registration_completes",
+      "outcome": "passed",
+      "duration": 0.0007394720000775123
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_pending_registration_is_pending_work",
+      "outcome": "passed",
+      "duration": 0.000717891000022064
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_failed_registration_rejects_peer",
+      "outcome": "passed",
+      "duration": 0.0008364739996977733
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_failed_ack_send_marks_connection_dead",
+      "outcome": "passed",
+      "duration": 0.0008685160000823089
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_duplicate_connect_during_registration_is_rejected",
+      "outcome": "passed",
+      "duration": 0.0008508650003022922
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_connect_ack_makes_session_ready",
+      "outcome": "passed",
+      "duration": 0.0006649299998571223
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_messages_queued_before_ack_flush_on_ack",
+      "outcome": "passed",
+      "duration": 0.0007391019998976844
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_block_len_mismatch_marks_dead",
+      "outcome": "passed",
+      "duration": 0.000815333999980794
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_model_config_fingerprint_mismatch_rejects_peer[rope]",
+      "outcome": "passed",
+      "duration": 9.603158076
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_model_config_fingerprint_mismatch_rejects_peer[output-only-hf-field]",
+      "outcome": "passed",
+      "duration": 0.011727557000085653
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_model_config_fingerprint_mismatch_rejects_peer[context-limit]",
+      "outcome": "passed",
+      "duration": 0.011674564999793802
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_matching_model_config_fingerprints_register_peer",
+      "outcome": "passed",
+      "duration": 0.011776318000102037
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_missing_fingerprint_allowed",
+      "outcome": "passed",
+      "duration": 0.0007546120000370138
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_hash_seed_mismatch_marks_dead",
+      "outcome": "passed",
+      "duration": 0.000811235000128363
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_hash_seed_match_succeeds",
+      "outcome": "passed",
+      "duration": 0.0007102409999788506
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectHandshake::test_hash_seed_advertised_in_connect_msg",
+      "outcome": "passed",
+      "duration": 0.0007207620001281612
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_request_blocks_sends_fetch",
+      "outcome": "passed",
+      "duration": 0.0007520829999521084
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_transfer_done_success",
+      "outcome": "passed",
+      "duration": 0.0007518420002270432
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_transfer_done_failure",
+      "outcome": "passed",
+      "duration": 0.0007498029999624123
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_finish_request_sends_abort",
+      "outcome": "passed",
+      "duration": 0.0007634929997948348
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_finish_preserves_active_load_until_terminal_result",
+      "outcome": "passed",
+      "duration": 0.0007714430003034067
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_finish_abort_ack_emits_one_failure",
+      "outcome": "passed",
+      "duration": 0.0008719869997548813
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_finish_abort_timeout_emits_one_failure",
+      "outcome": "passed",
+      "duration": 0.0008650260001559218
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_late_transfer_done_after_abort_ack_is_ignored",
+      "outcome": "passed",
+      "duration": 0.0009199579999403795
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_active_loads_work_list_tracks_in_flight",
+      "outcome": "passed",
+      "duration": 0.0007912940000096569
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_load_timeout_sends_abort",
+      "outcome": "passed",
+      "duration": 0.0009030080000229646
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_load_timeout_depends_on_mode",
+      "outcome": "passed",
+      "duration": 0.0008805869997559057
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_load_abort_ack_timeout_surfaces_failure",
+      "outcome": "passed",
+      "duration": 0.0009806600000956678
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestClientFlows::test_load_abort_ack_clears_request",
+      "outcome": "passed",
+      "duration": 0.0009215879999828758
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_lookup_deadline_starts_after_handshake",
+      "outcome": "passed",
+      "duration": 0.0010626439998304704
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_partial_response_rearms_lookup_deadline",
+      "outcome": "passed",
+      "duration": 0.0009641000001465727
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_lookup_progress_keeps_overlapping_batches_alive",
+      "outcome": "passed",
+      "duration": 0.000994189999801165
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_buffered_lookup_response_precedes_expiry",
+      "outcome": "passed",
+      "duration": 0.0007734239998171688
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_duplicate_responses_and_new_keys_do_not_rearm",
+      "outcome": "passed",
+      "duration": 0.0009144680002464156
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_lookup_expiry_preserves_completed_transfers[False]",
+      "outcome": "passed",
+      "duration": 0.0009520280000288039
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_lookup_expiry_preserves_completed_transfers[True]",
+      "outcome": "passed",
+      "duration": 0.0010373210002398991
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_lookup_deadline_cleared_before_next_batch[resolve]",
+      "outcome": "passed",
+      "duration": 0.0009355090001008648
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_lookup_deadline_cleared_before_next_batch[finish]",
+      "outcome": "passed",
+      "duration": 0.0008904460000849213
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_lookup_deadline_cleared_before_next_batch[fetch]",
+      "outcome": "passed",
+      "duration": 0.0010158909999518073
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_aggregate_flush_resolve_round_trip",
+      "outcome": "passed",
+      "duration": 0.0007511630001317826
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_request_blocks_clears_probe_cache",
+      "outcome": "passed",
+      "duration": 0.0007805739996911143
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_flush_uses_work_list_not_full_scan",
+      "outcome": "passed",
+      "duration": 0.0007109919997674297
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_separate_lookup_msg_per_kv_request_id",
+      "outcome": "passed",
+      "duration": 0.0007464619998245325
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_multiple_lookup_msgs_across_steps",
+      "outcome": "passed",
+      "duration": 0.0007347420000769489
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_split_response_resolves_across_messages",
+      "outcome": "passed",
+      "duration": 0.000822013999822957
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_finish_request_cancels_pending_lookups",
+      "outcome": "passed",
+      "duration": 0.0007237619997795264
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_finish_after_flushed_lookup_sends_empty_fetch",
+      "outcome": "passed",
+      "duration": 0.0007480029998987447
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_finish_without_flushed_lookup_sends_no_fetch",
+      "outcome": "passed",
+      "duration": 0.0007233310002447979
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_finish_after_real_fetch_sends_no_second_fetch",
+      "outcome": "passed",
+      "duration": 0.0007576630000585283
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestLookupFlow::test_server_lookup_deferred_until_serve_then_all_misses",
+      "outcome": "passed",
+      "duration": 0.0007773540000926005
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerLookupHandling::test_immediate_hits_create_one_store_job",
+      "outcome": "passed",
+      "duration": 0.0008842360002745409
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerLookupHandling::test_all_misses_no_store_job_finish_fires",
+      "outcome": "passed",
+      "duration": 0.0007491520000257879
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerLookupHandling::test_mixed_hit_miss_pending_defers_response_until_aggregate",
+      "outcome": "passed",
+      "duration": 0.0008428559999629215
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerLookupHandling::test_pending_resolves_then_aggregate_response_fires",
+      "outcome": "passed",
+      "duration": 0.0008480149999741116
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerLookupHandling::test_pending_timeout_replies_miss_no_store_job",
+      "outcome": "passed",
+      "duration": 0.0008118549999380775
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerLookupHandling::test_finish_request_called_per_lookup_msg_not_per_kv_request_id",
+      "outcome": "passed",
+      "duration": 0.0013270310000734753
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerLookupHandling::test_close_returns_open_batch_ctxs_as_failed_serves",
+      "outcome": "passed",
+      "duration": 0.0007572930003334477
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerLookupHandling::test_wire_finish_drops_pending_batches_for_kv_request_id",
+      "outcome": "passed",
+      "duration": 0.0008172640000339015
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerLookupHandling::test_incoming_fetch_drops_pending_lookups_for_kv_request_id",
+      "outcome": "passed",
+      "duration": 0.000807694000286574
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerLookupHandling::test_lookup_then_fetch_round_trip_emits_store_result",
+      "outcome": "passed",
+      "duration": 0.0008507570000801934
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_store_then_fetch_matches",
+      "outcome": "passed",
+      "duration": 0.0007885239997449389
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_fetch_then_store_matches",
+      "outcome": "passed",
+      "duration": 0.0007418860000143468
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_transfer_completion_emits_store_result_and_done",
+      "outcome": "passed",
+      "duration": 0.0008076650001385133
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_abort_fetch_replies_with_ack",
+      "outcome": "passed",
+      "duration": 0.0008531560001756588
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_abort_fetch_defers_ack_when_cancel_pending",
+      "outcome": "passed",
+      "duration": 0.0007926329999463633
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_abort_fetch_acks_after_drain",
+      "outcome": "passed",
+      "duration": 0.0007705129996793403
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_abort_fetch_never_force_cancels_after_timeout",
+      "outcome": "passed",
+      "duration": 0.0009196279997922829
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_abort_fetch_idempotent_while_draining",
+      "outcome": "passed",
+      "duration": 0.0007566429999315005
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_store_timeout",
+      "outcome": "passed",
+      "duration": 0.0008740660000512435
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_store_timeout_cancels_stuck_transfer_after_confirmation[False]",
+      "outcome": "passed",
+      "duration": 0.0008047940000324161
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_store_timeout_cancels_stuck_transfer_after_confirmation[True]",
+      "outcome": "passed",
+      "duration": 0.0008678170001985563
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_store_timeout_keeps_pins_until_cancel_or_late_terminal[True]",
+      "outcome": "passed",
+      "duration": 0.0009651400000620924
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_store_timeout_keeps_pins_until_cancel_or_late_terminal[False]",
+      "outcome": "passed",
+      "duration": 0.0009723699999995006
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_store_timeout_waits_for_other_transfers_in_round[True]",
+      "outcome": "passed",
+      "duration": 0.0008754370001042844
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_store_timeout_waits_for_other_transfers_in_round[False]",
+      "outcome": "passed",
+      "duration": 0.00087927699996726
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_store_timeout_waits_for_other_transfers_in_round[None]",
+      "outcome": "passed",
+      "duration": 0.0009923600000547594
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_failed_transfer_keeps_sibling_pins_until_terminal",
+      "outcome": "passed",
+      "duration": 0.0008981279997897218
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_abort_during_store_timeout_keeps_unconfirmed_pins",
+      "outcome": "passed",
+      "duration": 0.0010287410000273667
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_store_timeout_cancel_retry_is_paced",
+      "outcome": "passed",
+      "duration": 0.0010062100000141072
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_abort_drain_cancel_retry_is_paced",
+      "outcome": "passed",
+      "duration": 0.0009272090001104516
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_unconfirmed_store_cancel_never_acks_or_tears_down",
+      "outcome": "passed",
+      "duration": 0.0015244459996210935
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_abort_keeps_pins_only_of_jobs_being_written",
+      "outcome": "passed",
+      "duration": 0.0009182980002151453
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_abort_acks_after_late_terminal_without_transfer_done[True]",
+      "outcome": "passed",
+      "duration": 0.00085371600016515
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_abort_acks_after_late_terminal_without_transfer_done[False]",
+      "outcome": "passed",
+      "duration": 0.0012557380000544072
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestServerFlows::test_fetch_after_symmetric_supply_timed_out_reads_nothing",
+      "outcome": "passed",
+      "duration": 0.0010157709998566133
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_no_inflight_unmatched_demand_sends_failure",
+      "outcome": "passed",
+      "duration": 0.0007441230000040377
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_with_inflight_defers_then_fires_on_last_transfer",
+      "outcome": "passed",
+      "duration": 0.0008175250000022061
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_full_demand_satisfied_still_sends_success",
+      "outcome": "passed",
+      "duration": 0.0008049829998526548
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_prefiller_first_finish_before_fetch",
+      "outcome": "passed",
+      "duration": 0.0008659059999445162
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_unknown_request_is_noop",
+      "outcome": "passed",
+      "duration": 0.0006831610003246169
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_finish_request_no_inflight_emits_store_failure",
+      "outcome": "passed",
+      "duration": 0.0007859749998715415
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_finish_request_remaining_zero_emits_success_via_inflight",
+      "outcome": "passed",
+      "duration": 0.0007836039999347122
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_write_blocks_failure_finalizes_with_failure[fetch-first]",
+      "outcome": "passed",
+      "duration": 0.0008905769996090385
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_write_blocks_failure_finalizes_with_failure[store-first]",
+      "outcome": "passed",
+      "duration": 0.001031561000218062
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_write_blocks_failure_finalizes_with_failure[finish-before-fetch]",
+      "outcome": "passed",
+      "duration": 0.0009210089997395698
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_partial_match_completes_in_two_rounds",
+      "outcome": "passed",
+      "duration": 0.0008255060001829406
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFinishRequestServerSide::test_write_blocks_failure_finalizes_after_last_inflight_completes",
+      "outcome": "passed",
+      "duration": 0.0009687490000942489
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestBidirectional::test_session_handles_both_roles_concurrently",
+      "outcome": "passed",
+      "duration": 0.0008275359996332554
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestPendingSession::test_pending_session_buffers_stored_blocks",
+      "outcome": "passed",
+      "duration": 0.0006511000001410139
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestPendingSession::test_attach_connection_sends_connect",
+      "outcome": "passed",
+      "duration": 0.0006380590002663666
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestPendingSession::test_attach_connection_twice_raises",
+      "outcome": "passed",
+      "duration": 0.000765112999943085
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestPendingSession::test_pending_close_returns_pending_stores",
+      "outcome": "passed",
+      "duration": 0.0007146210000428255
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestDisconnect::test_disconnect_marks_session_dead",
+      "outcome": "passed",
+      "duration": 0.0006975810001677019
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestDisconnect::test_close_returns_pending_loads_and_stores",
+      "outcome": "passed",
+      "duration": 0.0007718040001236659
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestDisconnect::test_send_failure_marks_connection_dead",
+      "outcome": "passed",
+      "duration": 0.0008402849998674355
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestDisconnect::test_close_surfaces_inflight_lookups",
+      "outcome": "passed",
+      "duration": 0.0007778939998388523
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestAdversarial::test_unknown_message_type_logged",
+      "outcome": "passed",
+      "duration": 0.0008583759999964968
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestAdversarial::test_empty_message",
+      "outcome": "passed",
+      "duration": 0.0008155850000548526
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestAdversarial::test_non_dict_message",
+      "outcome": "passed",
+      "duration": 0.0008132939997267385
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestAdversarial::test_fetch_mismatched_lengths",
+      "outcome": "passed",
+      "duration": 0.0008852969999679772
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestAdversarial::test_transfer_done_missing_kv_request_id",
+      "outcome": "passed",
+      "duration": 0.000915497999812942
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestAdversarial::test_duplicate_connect_ack",
+      "outcome": "passed",
+      "duration": 0.0006942109998817614
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestDispatchErrorHandling::test_value_error_disconnects_on_first_occurrence",
+      "outcome": "passed",
+      "duration": 0.000878226999702747
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestDispatchErrorHandling::test_transfer_done_missing_field_disconnects",
+      "outcome": "passed",
+      "duration": 0.0008390039997721033
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestDispatchErrorHandling::test_internal_error_does_not_disconnect_once",
+      "outcome": "passed",
+      "duration": 0.0021358449998842843
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestDispatchErrorHandling::test_internal_error_threshold_disconnects",
+      "outcome": "passed",
+      "duration": 0.0021987379996062373
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestDispatchErrorHandling::test_internal_error_counter_resets_on_success",
+      "outcome": "passed",
+      "duration": 0.002224579000085214
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestInflightPerReqInvariant::test_invariant_holds_through_lifecycle",
+      "outcome": "passed",
+      "duration": 0.0008409560000472993
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestInflightPerReqInvariant::test_has_inflight_for_correct_with_many_requests",
+      "outcome": "passed",
+      "duration": 0.003129295000235288
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectMsgValidation::test_valid_message_passes",
+      "outcome": "passed",
+      "duration": 0.0006161890000839776
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectMsgValidation::test_missing_peer_id",
+      "outcome": "passed",
+      "duration": 0.0007056320000629057
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectMsgValidation::test_missing_agent_metadata",
+      "outcome": "passed",
+      "duration": 0.0007433229998241586
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectMsgValidation::test_agent_metadata_wrong_type",
+      "outcome": "passed",
+      "duration": 0.0006733699997312215
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectMsgValidation::test_base_addr_negative",
+      "outcome": "passed",
+      "duration": 0.0007465230000889278
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectMsgValidation::test_num_blocks_zero",
+      "outcome": "passed",
+      "duration": 0.0010513309998714249
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectMsgValidation::test_block_len_zero",
+      "outcome": "passed",
+      "duration": 0.0007215619998532929
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectMsgValidation::test_missing_hash_seed",
+      "outcome": "passed",
+      "duration": 0.0007279330002347706
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestConnectMsgValidation::test_hash_seed_wrong_type",
+      "outcome": "passed",
+      "duration": 0.000657149999824469
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFetchMsgValidation::test_valid_message_passes",
+      "outcome": "passed",
+      "duration": 0.0006421799998861388
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFetchMsgValidation::test_length_mismatch",
+      "outcome": "passed",
+      "duration": 0.0007975050002642092
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestFetchMsgValidation::test_negative_index",
+      "outcome": "passed",
+      "duration": 0.00074080199965465
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestTransferDoneMsgValidation::test_valid_message_passes",
+      "outcome": "passed",
+      "duration": 0.0006296500000644301
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestTransferDoneMsgValidation::test_success_wrong_type",
+      "outcome": "passed",
+      "duration": 0.0007099630001903279
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestHandshakeDeadline::test_marks_dead_after_timeout",
+      "outcome": "passed",
+      "duration": 0.0008363050001207739
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestHandshakeDeadline::test_no_timeout_when_ready",
+      "outcome": "passed",
+      "duration": 0.0007461730001523392
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestHandshakeDeadline::test_buffered_ack_at_deadline_completes_handshake",
+      "outcome": "passed",
+      "duration": 0.0007492820000152278
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestHandshakeDeadline::test_activity_timestamp_updated_on_recv",
+      "outcome": "passed",
+      "duration": 0.0006990619999669434
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestPeerFaultEscalation::test_fault_with_nothing_inflight_disconnects",
+      "outcome": "passed",
+      "duration": 0.0008172360003300128
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestPeerFaultEscalation::test_fault_waits_for_inflight_then_disconnects",
+      "outcome": "passed",
+      "duration": 0.001014371000110259
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestPeerFaultEscalation::test_fault_disconnects_after_drain_deadline",
+      "outcome": "passed",
+      "duration": 0.0009135970003626426
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestPeerFaultEscalation::test_death_reasons",
+      "outcome": "passed",
+      "duration": 0.0007356529999924533
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/p2p/test_sessions.py::TestPeerFaultEscalation::test_first_death_reason_wins",
+      "outcome": "passed",
+      "duration": 0.0007319410001400684
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_over_model_shapes[single-full-group]",
+      "outcome": "passed",
+      "duration": 0.0006658500001321954
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_over_model_shapes[uniform-swa-4096]",
+      "outcome": "passed",
+      "duration": 0.0006741699999111006
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_over_model_shapes[uniform-swa-1024]",
+      "outcome": "passed",
+      "duration": 0.0006361499999911757
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_over_model_shapes[full-plus-6-swa-1024]",
+      "outcome": "passed",
+      "duration": 0.0006540589997712232
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_over_model_shapes[full-plus-9-mamba]",
+      "outcome": "passed",
+      "duration": 0.0006508900000881113
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_over_model_shapes[pure-mamba]",
+      "outcome": "passed",
+      "duration": 0.0006594999999833817
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_over_model_shapes[full-plus-hidden]",
+      "outcome": "passed",
+      "duration": 0.0006718610002280911
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_over_model_shapes[full-plus-swa-plus-mamba]",
+      "outcome": "passed",
+      "duration": 0.0007116980000319018
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_over_model_shapes[empty-tier]",
+      "outcome": "passed",
+      "duration": 0.000646818999939569
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_is_none_when_unknown[max-model-len-not-known]",
+      "outcome": "passed",
+      "duration": 0.0009003560003293387
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/cpu/test_capacity.py::test_size_tokens_is_none_when_unknown[no-groups]",
+      "outcome": "passed",
+      "duration": 0.0006744010001966672
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_tiering_spec_collects_secondary_metric_definitions",
+      "outcome": "passed",
+      "duration": 0.0007200619998002367
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_tiering_manager_aggregates_secondary_stats",
+      "outcome": "passed",
+      "duration": 0.001330461000179639
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestExampleSecondaryTierManager::test_basic_store_and_lookup",
+      "outcome": "passed",
+      "duration": 0.0008225649999076268
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestExampleSecondaryTierManager::test_config_info_keys_match_the_filled_values",
+      "outcome": "passed",
+      "duration": 0.000779193999733252
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_every_lookup_result_has_a_declared_cascade_behavior",
+      "outcome": "passed",
+      "duration": 0.0006418489997486176
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_failed_promotion_finalizes_primary_with_failure",
+      "outcome": "passed",
+      "duration": 0.001221247000103176
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_successful_promotion_finalizes_primary_with_success",
+      "outcome": "passed",
+      "duration": 0.0012619869999070943
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_take_events_aggregates_tier_owned_events",
+      "outcome": "passed",
+      "duration": 0.0010489819997019367
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_basic_store_to_primary",
+      "outcome": "passed",
+      "duration": 0.0007877739999457845
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_cascade_to_all_secondary_tiers",
+      "outcome": "passed",
+      "duration": 0.0010141909997400944
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_ref_cnt_protection_during_cascade",
+      "outcome": "passed",
+      "duration": 0.0008665159998599847
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_lookup_from_primary",
+      "outcome": "passed",
+      "duration": 0.0008025649999581219
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_promotion_from_secondary[external_unspecified]",
+      "outcome": "passed",
+      "duration": 0.001083872999970481
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_promotion_from_secondary[disk]",
+      "outcome": "passed",
+      "duration": 0.001004079999802343
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_promotion_from_secondary[p2p]",
+      "outcome": "passed",
+      "duration": 0.001019870999698469
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_failed_promotion_keeps_only_successful_chunks[partial-external_unspecified]",
+      "outcome": "passed",
+      "duration": 0.0009131380002145306
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_failed_promotion_keeps_only_successful_chunks[partial-disk]",
+      "outcome": "passed",
+      "duration": 0.0009143580000454676
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_failed_promotion_keeps_only_successful_chunks[partial-p2p]",
+      "outcome": "passed",
+      "duration": 0.0008977980000963726
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_failed_promotion_keeps_only_successful_chunks[legacy-full-failure-external_unspecified]",
+      "outcome": "passed",
+      "duration": 0.0009071079998648202
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_failed_promotion_keeps_only_successful_chunks[legacy-full-failure-disk]",
+      "outcome": "passed",
+      "duration": 0.0009404520001226047
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_failed_promotion_keeps_only_successful_chunks[legacy-full-failure-p2p]",
+      "outcome": "passed",
+      "duration": 0.0008873680003489426
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_lookup_reports_sync_delay_for_resolved_lookups",
+      "outcome": "passed",
+      "duration": 0.000791765000030864
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_lookup_does_not_report_async_delay_for_promotion",
+      "outcome": "passed",
+      "duration": 0.0009575980002409779
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_lookup_reports_async_delay_when_deferred_lookup_resolves",
+      "outcome": "passed",
+      "duration": 0.0010806320001393033
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_partial_lookup",
+      "outcome": "passed",
+      "duration": 0.000812724999832426
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_eviction_in_primary_tier",
+      "outcome": "passed",
+      "duration": 0.00087953699994614
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_touch_propagates_to_all_tiers",
+      "outcome": "passed",
+      "duration": 0.00106487199991534
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_request_order_survives_late_cascade_completion",
+      "outcome": "passed",
+      "duration": 0.000909207999939099
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_late_old_store_submission_does_not_override_newer_request_order",
+      "outcome": "passed",
+      "duration": 0.000938609000058932
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_failed_store_no_cascade",
+      "outcome": "passed",
+      "duration": 0.00094888900002843
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_held_promotions_keep_primary_hits",
+      "outcome": "passed",
+      "duration": 0.0007883850003054249
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_reset_holds_promotions_until_flushed",
+      "outcome": "passed",
+      "duration": 0.0007989050000105635
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_lookup_batches_submit_load_per_request",
+      "outcome": "passed",
+      "duration": 0.0010897429997385188
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_lookup_shared_chunk_no_duplicate_promotion",
+      "outcome": "passed",
+      "duration": 0.0009017780002977815
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_complete_store_forwards_req_context_to_submit_store",
+      "outcome": "passed",
+      "duration": 0.0008940870002334123
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_on_request_finished_delays_only_secondary_until_store_submitted",
+      "outcome": "passed",
+      "duration": 0.0014122239999778685
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_failed_store_finalizes_finished_request",
+      "outcome": "passed",
+      "duration": 0.0012864089999311545
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_zero_store_request_finalizes_immediately",
+      "outcome": "passed",
+      "duration": 0.0008650459999444138
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_reset_cache_finalizes_delayed_secondary_request",
+      "outcome": "passed",
+      "duration": 0.0010437319997436134
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_reset_cache_clears_pending_primary_stores_for_active_request",
+      "outcome": "passed",
+      "duration": 0.001073681999969267
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_on_new_request_lifecycle",
+      "outcome": "passed",
+      "duration": 0.0006748499999957858
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_prepare_store_cascades_existing_chunks_to_request_level_tiers[fully_warm]",
+      "outcome": "passed",
+      "duration": 0.00119306599981428
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_prepare_store_cascades_existing_chunks_to_request_level_tiers[mixed]",
+      "outcome": "passed",
+      "duration": 0.0011232540000492008
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_cascade_rejects_retry_from_primary",
+      "outcome": "passed",
+      "duration": 0.0009284070001740474
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_cascade_defers_keys_whose_primary_write_is_in_flight",
+      "outcome": "passed",
+      "duration": 0.0010475110002516885
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_deferred_cascade_holds_request_from_finalization",
+      "outcome": "passed",
+      "duration": 0.0010430319998704363
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_cascade_drops_deferred_keys_whose_primary_write_failed",
+      "outcome": "passed",
+      "duration": 0.0009649389999140112
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_reset_cache_clears_orchestrator_state",
+      "outcome": "passed",
+      "duration": 0.0010899440003413474
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_reset_cache_drains_all_tiers",
+      "outcome": "passed",
+      "duration": 0.0010561819999566069
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_tier_filter_skips_filtered_secondary[non_matching_medium]",
+      "outcome": "passed",
+      "duration": 0.0009477789999436936
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_tier_filter_skips_filtered_secondary[empty_no_load]",
+      "outcome": "passed",
+      "duration": 0.0009116879996327043
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_tier_filter_allows_matching_secondary[all]",
+      "outcome": "passed",
+      "duration": 0.0008862370000315423
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_tier_filter_allows_matching_secondary[explicit_cpu]",
+      "outcome": "passed",
+      "duration": 0.0009459689999857801
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingManager::test_tier_filter_allows_matching_secondary[unconstrained_matcher]",
+      "outcome": "passed",
+      "duration": 0.0008918359999370296
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::TestTieringOffloadingWithoutSecondaryTiers::test_works_without_secondary_tiers",
+      "outcome": "passed",
+      "duration": 0.001193207000142138
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_parse_tier_filter_valid[medium_storage]",
+      "outcome": "passed",
+      "duration": 0.0006349989998852834
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_parse_tier_filter_valid[medium_cpu_uppercase]",
+      "outcome": "passed",
+      "duration": 0.0006345990000227175
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_parse_tier_filter_valid[unconstrained]",
+      "outcome": "passed",
+      "duration": 0.0006711510000059207
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_parse_tier_filter_valid[with_locality]",
+      "outcome": "passed",
+      "duration": 0.0006109279997872363
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_parse_tier_filter_valid[multiple_matchers]",
+      "outcome": "passed",
+      "duration": 0.0006144589997347794
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_parse_tier_filter_valid[empty_list_deny_all]",
+      "outcome": "passed",
+      "duration": 0.0006446500001402455
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_parse_tier_filter_invalid_returns_all[non_list]",
+      "outcome": "passed",
+      "duration": 0.000741892999940319
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_parse_tier_filter_invalid_returns_all[invalid_medium]",
+      "outcome": "passed",
+      "duration": 0.0007962849999785249
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_parse_tier_filter_invalid_returns_all[invalid_locality]",
+      "outcome": "passed",
+      "duration": 0.0007685040000069421
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_parse_tier_filter_skips_bad_entries",
+      "outcome": "passed",
+      "duration": 0.0007902130000729812
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_tiering_manager_reports_one_config_info_series_for_each_tier",
+      "outcome": "passed",
+      "duration": 0.0011266540000178793
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_tiering_manager_reports_the_primary_series_with_no_secondary_tier",
+      "outcome": "passed",
+      "duration": 0.0010643319997143408
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_tiering_manager_rejects_a_primary_tier_with_two_info_mappings",
+      "outcome": "passed",
+      "duration": 0.0010880230001930613
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_tiering_manager_keeps_the_tier_label_out_of_the_tier_mapping",
+      "outcome": "passed",
+      "duration": 0.0011252439999225317
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_tiering_spec_declares_the_config_info_keys_the_manager_fills",
+      "outcome": "passed",
+      "duration": 0.0013072589999865158
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_tiering_spec_passes_each_tier_its_own_config",
+      "outcome": "passed",
+      "duration": 0.0008682060001774516
+    },
+    {
+      "nodeid": "tests/v1/kv_offload/tiering/test_tiering_offloading.py::test_tiering_spec_rejects_a_tier_that_declares_the_reserved_tier_label",
+      "outcome": "passed",
+      "duration": 0.0010029699997176067
+    }
+  ]
+}

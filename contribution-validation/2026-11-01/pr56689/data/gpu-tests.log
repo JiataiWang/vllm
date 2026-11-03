@@ -1,0 +1,23 @@
+Waiting for all model validation jobs to finish.
+Mon Nov  2 07:58:52 UTC 2026
+{"head": "2f25de1c9d3a31160b7f2e789428f5129dd006dd", "tree": "eb833d3579382cb99305773e2876cc211dabeb02", "python": "/home/shadeform/vllm-pr-validation-nov1/pr56689/.venv/bin/python", "torch": "2.14.0+cu130", "torch_cuda": "13.0", "vllm_import": "/home/shadeform/vllm-pr-validation-nov1/pr56689/vllm/__init__.py", "cuda_visible_devices": "0,1,2,3,4,5,6,7", "allow_insecure_serialization": "1", "ray_tmpdir": "/tmp/vlray-nov1.bjYUHl", "cuda_initialized_before": false, "tests": ["tests/distributed/test_weight_transfer.py"]}
+/home/shadeform/vllm-pr-validation-nov1/pr56689/.venv/lib/python3.12/site-packages/pytest_asyncio/plugin.py:300: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the "fixture" caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to "function" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+Running 140 items in this shard
+........................................................................ [ 51%]
+.............................................sssssssssssssssssssssss     [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/distributed/test_weight_transfer.py:2388: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [5] tests/distributed/test_weight_transfer.py:2400: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [1] tests/distributed/test_weight_transfer.py:2441: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [1] tests/distributed/test_weight_transfer.py:2459: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [1] tests/distributed/test_weight_transfer.py:2500: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [6] tests/distributed/test_weight_transfer.py:2547: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [4] tests/distributed/test_weight_transfer.py:2567: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [3] tests/distributed/test_weight_transfer.py:2577: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+SKIPPED [1] tests/distributed/test_weight_transfer.py:2598: could not import 'modelexpress_rl.inference.client': No module named 'modelexpress_rl'
+117 passed, 23 skipped in 105.91s (0:01:45)
+[W1102 08:00:49.291089670 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+Mon Nov  2 08:00:50 UTC 2026

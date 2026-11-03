@@ -1,0 +1,719 @@
+{
+  "head": "2f25de1c9d3a31160b7f2e789428f5129dd006dd",
+  "tree": "eb833d3579382cb99305773e2876cc211dabeb02",
+  "python": "/home/shadeform/vllm-pr-validation-nov1/pr56689/.venv/bin/python",
+  "torch": "2.14.0+cu130",
+  "torch_cuda": "13.0",
+  "vllm_import": "/home/shadeform/vllm-pr-validation-nov1/pr56689/vllm/__init__.py",
+  "cuda_visible_devices": "0,1,2,3,4,5,6,7",
+  "allow_insecure_serialization": "1",
+  "ray_tmpdir": "/tmp/vlray-nov1.bjYUHl",
+  "cuda_initialized_before": false,
+  "tests": [
+    "tests/distributed/test_weight_transfer.py"
+  ],
+  "pytest_exit_code": 0,
+  "tests_results": [
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestNCCLWeightTransferUpdateInfoValidation::test_valid_update_info",
+      "outcome": "passed",
+      "duration": 0.0006103180003265152
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestNCCLWeightTransferUpdateInfoValidation::test_mismatched_dtype_names_raises",
+      "outcome": "passed",
+      "duration": 0.0007260599995788652
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestNCCLWeightTransferUpdateInfoValidation::test_mismatched_shapes_raises",
+      "outcome": "passed",
+      "duration": 0.0007201809994512587
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestNCCLWeightTransferUpdateInfoValidation::test_empty_lists_valid",
+      "outcome": "passed",
+      "duration": 0.0005927669999437057
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestSparseNCCLWeightTransferUpdateInfoValidation::test_valid_sparse_update_info",
+      "outcome": "passed",
+      "duration": 0.0005998280003041145
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestSparseNCCLWeightTransferUpdateInfoValidation::test_mismatched_dtype_names_raises",
+      "outcome": "passed",
+      "duration": 0.0006267389999266015
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestSparseNCCLWeightTransferUpdateInfoValidation::test_rejects_empty_num_updates_list",
+      "outcome": "passed",
+      "duration": 0.0006901610004206304
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestSparseNCCLWeightTransferUpdateInfoValidation::test_rejects_mismatched_num_updates",
+      "outcome": "passed",
+      "duration": 0.0006947909996597446
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestSparseNCCLWeightTransferUpdateInfoValidation::test_rejects_negative_num_updates",
+      "outcome": "passed",
+      "duration": 0.0006874000000607339
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_shutdown_destroys_communicator_once[NCCLWeightTransferEngine]",
+      "outcome": "passed",
+      "duration": 0.001013260000036098
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_shutdown_destroys_communicator_once[NCCLTrainerWeightTransferEngine]",
+      "outcome": "passed",
+      "duration": 0.0009536780007692869
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_shutdown_destroys_communicator_once[SparseNCCLWeightTransferEngine]",
+      "outcome": "passed",
+      "duration": 0.0009700789996713866
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_shutdown_destroys_communicator_once[SparseNCCLTrainerWeightTransferEngine]",
+      "outcome": "passed",
+      "duration": 0.0010160199999518227
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestNCCLEngineParsing::test_parse_init_info_valid",
+      "outcome": "passed",
+      "duration": 0.0019030860003113048
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestNCCLEngineParsing::test_parse_init_info_missing_field_raises",
+      "outcome": "passed",
+      "duration": 0.0019433970001045964
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestNCCLEngineParsing::test_parse_update_info_valid",
+      "outcome": "passed",
+      "duration": 0.0018193039995821891
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestEngineRegistry::test_create_engine_nccl",
+      "outcome": "passed",
+      "duration": 0.0018167129992434639
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestEngineRegistry::test_create_engine_ipc",
+      "outcome": "passed",
+      "duration": 0.0018005540005106013
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestEngineRegistry::test_create_engine_sparse_nccl",
+      "outcome": "passed",
+      "duration": 0.0017838229996414157
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestEngineRegistry::test_modelexpress_registration_is_native_and_lazy",
+      "outcome": "passed",
+      "duration": 0.0021452629998748307
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestEngineRegistry::test_create_engine_invalid_backend",
+      "outcome": "passed",
+      "duration": 0.0018923659999927622
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestEngineRegistry::test_register_duplicate_raises",
+      "outcome": "passed",
+      "duration": 0.0006931500001883251
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_receive_weights_without_init_raises",
+      "outcome": "passed",
+      "duration": 0.0020479800004977733
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_sparse_nccl_receive_weights_without_init_raises",
+      "outcome": "passed",
+      "duration": 0.001970038000763452
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_weight_transfer_between_processes[default]",
+      "outcome": "passed",
+      "duration": 18.535632119000184
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_weight_transfer_between_processes[batch-invariant-worker]",
+      "outcome": "passed",
+      "duration": 14.226176423000652
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_sparse_nccl_checkpoint_chunks_to_ep_local_experts_cpu",
+      "outcome": "passed",
+      "duration": 0.011801083999671391
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCWeightTransferUpdateInfoValidation::test_valid_update_info",
+      "outcome": "passed",
+      "duration": 0.46798134700020455
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCWeightTransferUpdateInfoValidation::test_mismatched_dtype_names_raises",
+      "outcome": "passed",
+      "duration": 0.0012290730001041084
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCWeightTransferUpdateInfoValidation::test_mismatched_shapes_raises",
+      "outcome": "passed",
+      "duration": 0.0011145729995405418
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCWeightTransferUpdateInfoValidation::test_mismatched_ipc_handles_raises",
+      "outcome": "passed",
+      "duration": 0.001241135999407561
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCWeightTransferUpdateInfoValidation::test_valid_update_info_from_pickled",
+      "outcome": "passed",
+      "duration": 0.0011685240006045206
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCWeightTransferUpdateInfoValidation::test_pickled_requires_insecure_serialization_flag",
+      "outcome": "passed",
+      "duration": 0.0008098730004348909
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCWeightTransferUpdateInfoValidation::test_both_handles_and_pickled_raises",
+      "outcome": "passed",
+      "duration": 0.0011582450006244471
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCWeightTransferUpdateInfoValidation::test_neither_handles_nor_pickled_raises",
+      "outcome": "passed",
+      "duration": 0.0007533219995821128
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCWeightTransferUpdateInfoValidation::test_empty_lists_valid",
+      "outcome": "passed",
+      "duration": 0.0006537589997606119
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCEngineParsing::test_parse_update_info_valid",
+      "outcome": "passed",
+      "duration": 0.0023668809999435325
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCEngineParsing::test_parse_update_info_pickled",
+      "outcome": "passed",
+      "duration": 0.002359449999858043
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCEngineParsing::test_parse_update_info_ignores_none_pickled_handles",
+      "outcome": "passed",
+      "duration": 0.0018311940002604388
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestIPCEngineParsing::test_parse_update_info_both_handles_and_pickled_raises",
+      "outcome": "passed",
+      "duration": 0.0023990299996512476
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_ipc_weight_transfer_between_processes[ray]",
+      "outcome": "passed",
+      "duration": 18.558793565000087
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_ipc_weight_transfer_between_processes[http]",
+      "outcome": "passed",
+      "duration": 17.96757868899931
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_ipc_receive_weights_missing_gpu_uuid_raises",
+      "outcome": "passed",
+      "duration": 0.0024650369996379595
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerClients::test_recording_client_is_protocol",
+      "outcome": "passed",
+      "duration": 0.0007138010005292017
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerClients::test_http_client_is_protocol",
+      "outcome": "passed",
+      "duration": 0.0007604419997733203
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerClients::test_ray_client_is_protocol",
+      "outcome": "passed",
+      "duration": 0.0008612849997007288
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerClients::test_ray_client_sends_typed_requests",
+      "outcome": "passed",
+      "duration": 0.0024782229993434157
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerClients::test_http_client_pickles_ipc_handles_for_json",
+      "outcome": "passed",
+      "duration": 0.0006806209994465462
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerClients::test_http_client_passes_through_nccl_update_info",
+      "outcome": "passed",
+      "duration": 0.0006440580000344198
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestModuleSource::test_metadata_agrees_with_both_modes",
+      "outcome": "passed",
+      "duration": 0.0010350100001232931
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestModuleSource::test_tied_names_are_transferred_each_round[full-False]",
+      "outcome": "passed",
+      "duration": 0.0026676689994928893
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestModuleSource::test_tied_names_are_transferred_each_round[full-True]",
+      "outcome": "passed",
+      "duration": 0.001679840000178956
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestModuleSource::test_tied_names_are_transferred_each_round[local-False]",
+      "outcome": "passed",
+      "duration": 0.0016402289993493469
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestModuleSource::test_tied_names_are_transferred_each_round[local-True]",
+      "outcome": "passed",
+      "duration": 0.0016070069996203529
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestModuleSourceDTensor::test_metadata_declares_mesh_and_placements",
+      "outcome": "passed",
+      "duration": 0.015234201000566827
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestModuleSourceDTensor::test_iter_local_yields_this_ranks_shard",
+      "outcome": "passed",
+      "duration": 0.0025716669997564168
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestModuleSourceDTensor::test_partial_placement_is_declared_replicated",
+      "outcome": "passed",
+      "duration": 0.006005637000271236
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestParamMetaOwnership::test_owners_default_to_a_flat_mesh",
+      "outcome": "passed",
+      "duration": 0.0006322379995253868
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestParamMetaOwnership::test_inconsistent_layouts_are_rejected[kwargs0-without owners]",
+      "outcome": "passed",
+      "duration": 0.0007860530004109023
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestParamMetaOwnership::test_inconsistent_layouts_are_rejected[kwargs1-distinct]",
+      "outcome": "passed",
+      "duration": 0.0009115869997913251
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestParamMetaOwnership::test_inconsistent_layouts_are_rejected[kwargs2-does not cover]",
+      "outcome": "passed",
+      "duration": 0.0008729760002097464
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestParamMetaOwnership::test_inconsistent_layouts_are_rejected[kwargs3-1-D mesh]",
+      "outcome": "passed",
+      "duration": 0.0008188840001821518
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestParamMetaOwnership::test_inconsistent_layouts_are_rejected[kwargs4-shards dim 1]",
+      "outcome": "passed",
+      "duration": 0.0008702859995537437
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestParamMetaOwnership::test_metadata_must_be_a_cached_property[<lambda>]",
+      "outcome": "passed",
+      "duration": 0.0008975560003818828
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestParamMetaOwnership::test_metadata_must_be_a_cached_property[property]",
+      "outcome": "passed",
+      "duration": 0.0006978020001042751
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestDeferredProcessingContract::test_every_engine_declares_whether_it_defers",
+      "outcome": "passed",
+      "duration": 0.010537361999922723
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestDeferredProcessingContract::test_every_engine_can_be_drained",
+      "outcome": "passed",
+      "duration": 0.0009265479993700865
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestDeferredProcessingContract::test_the_default_is_not_to_defer",
+      "outcome": "passed",
+      "duration": 0.0007108010004230891
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestDeferredProcessingContract::test_a_synchronous_engine_drains_as_a_no_op",
+      "outcome": "passed",
+      "duration": 0.0007516030000260798
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestDeferredProcessingContract::test_the_rdt_engine_defers_and_overrides_the_drain",
+      "outcome": "passed",
+      "duration": 0.0006554700003107428
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerFactory::test_registry_has_all_backends",
+      "outcome": "passed",
+      "duration": 0.0006757000001016422
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerFactory::test_register_and_dispatch",
+      "outcome": "passed",
+      "duration": 0.0010978529999192688
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerFactory::test_unknown_backend_raises",
+      "outcome": "passed",
+      "duration": 0.0011543450000317534
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerFactory::test_ipc_init_info_declares_backend",
+      "outcome": "passed",
+      "duration": 0.000622766999185842
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerFactory::test_nccl_init_info_declares_backend",
+      "outcome": "passed",
+      "duration": 0.0006430579996958841
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerFactory::test_sparse_nccl_init_info_declares_backend",
+      "outcome": "passed",
+      "duration": 0.0006884499998704996
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerFactory::test_trainer_init_info_subclass_must_set_backend",
+      "outcome": "passed",
+      "duration": 0.0007954239999889978
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerEngineBase::test_source_stored_and_sender_by_default",
+      "outcome": "passed",
+      "duration": 0.0007863129994802875
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::TestTrainerEngineBase::test_shutdown_default_is_noop",
+      "outcome": "passed",
+      "duration": 0.000859304999721644
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_ipc_trainer_send_weights_drives_client_in_order",
+      "outcome": "passed",
+      "duration": 0.0013533100000131526
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_ipc_trainer_init_ships_packed_to_worker",
+      "outcome": "passed",
+      "duration": 0.0013679129997399286
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_ipc_trainer_init_rejects_a_partitioned_source",
+      "outcome": "passed",
+      "duration": 0.0008955070006777532
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_rendezvous_runs_concurrently_and_waits_for_worker",
+      "outcome": "passed",
+      "duration": 0.0011982839996562689
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_rendezvous_propagates_errors_after_worker_exits[worker]",
+      "outcome": "passed",
+      "duration": 0.0011499840002215933
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_rendezvous_propagates_errors_after_worker_exits[trainer]",
+      "outcome": "passed",
+      "duration": 0.0013024680001763045
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_init_ships_worker_init_info[False]",
+      "outcome": "passed",
+      "duration": 0.0016694590003680787
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_init_ships_worker_init_info[True]",
+      "outcome": "passed",
+      "duration": 0.0013801699997202377
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_init_dispatches_subclass_hooks_only_on_sender[0]",
+      "outcome": "passed",
+      "duration": 0.0014068919999772334
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_init_dispatches_subclass_hooks_only_on_sender[1]",
+      "outcome": "passed",
+      "duration": 0.000790764000157651
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_worker_learns_wire_params_from_init_handshake",
+      "outcome": "passed",
+      "duration": 0.002146823000657605
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_init_non_sender_skips_rendezvous_and_client",
+      "outcome": "passed",
+      "duration": 0.0009534580003673909
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_send_weights_drives_client_in_order",
+      "outcome": "passed",
+      "duration": 0.001961697999831813
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_sends_metadata_only_when_changed",
+      "outcome": "passed",
+      "duration": 0.0030789720003667753
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_worker_reuses_metadata_per_model",
+      "outcome": "passed",
+      "duration": 0.0037644309995812364
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_init_requires_source",
+      "outcome": "passed",
+      "duration": 0.00084377500024857
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_send_weights_rejects_reordered_source",
+      "outcome": "passed",
+      "duration": 0.0020112399997742614
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_send_weights_rejects_dtype_disagreement",
+      "outcome": "passed",
+      "duration": 0.0016584999993938254
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_send_weights_rejects_truncated_source",
+      "outcome": "passed",
+      "duration": 0.001898622000226169
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_rejects_a_second_sender",
+      "outcome": "passed",
+      "duration": 0.0008400850001635263
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_non_sender_owner_drives_its_gathers",
+      "outcome": "passed",
+      "duration": 0.001225536000674765
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_send_weights_broadcasts_contiguous",
+      "outcome": "passed",
+      "duration": 0.0022986879994277842
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_nccl_trainer_send_weights_raises_instead_of_hanging",
+      "outcome": "passed",
+      "duration": 0.0016890360002435045
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_sparse_nccl_trainer_init_ships_worker_init_info",
+      "outcome": "passed",
+      "duration": 0.0013167189999876427
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_sparse_nccl_trainer_send_weights_drives_client_in_order",
+      "outcome": "passed",
+      "duration": 0.002426492000267899
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_sparse_nccl_trainer_send_weights_empty_round_is_noop",
+      "outcome": "passed",
+      "duration": 0.0008177930003512301
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_sparse_nccl_trainer_send_weights_requires_full_shape",
+      "outcome": "passed",
+      "duration": 0.0011124829998152563
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_sparse_nccl_trainer_rejects_source",
+      "outcome": "passed",
+      "duration": 0.0009829089995037066
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_sparse_nccl_trainer_validates_patch_before_any_rpc",
+      "outcome": "passed",
+      "duration": 0.0012189569997644867
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_sparse_nccl_trainer_non_sender_skips_client",
+      "outcome": "passed",
+      "duration": 0.001096602999496099
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_missing_backend_explains_source_install[modelexpress]",
+      "outcome": "passed",
+      "duration": 0.0012968680002813926
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_missing_backend_explains_source_install[modelexpress_rl]",
+      "outcome": "passed",
+      "duration": 0.0012040370002068812
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_missing_backend_explains_source_install[modelexpress_rl.inference]",
+      "outcome": "passed",
+      "duration": 0.0011809050001829746
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_missing_backend_explains_source_install[modelexpress_rl.inference.engines]",
+      "outcome": "passed",
+      "duration": 0.0011131930004921742
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_missing_backend_explains_source_install[modelexpress_rl.inference.engines.vllm]",
+      "outcome": "passed",
+      "duration": 0.0011983049998889328
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_missing_backend_explains_source_install[modelexpress_rl.inference.engines.vllm.weight_transfer_engine]",
+      "outcome": "passed",
+      "duration": 0.0012029259996779729
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_preserves_transitive_import_errors[grpc]",
+      "outcome": "passed",
+      "duration": 0.001260258000002068
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_preserves_transitive_import_errors[modelexpress.internal_dependency]",
+      "outcome": "passed",
+      "duration": 0.0011272629999439232
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_worker_rejects_updates_before_initialization",
+      "outcome": "skipped",
+      "duration": 0.0015875979997872491
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_worker_recovers_after_rejected_update[second_update0-RuntimeError]",
+      "outcome": "skipped",
+      "duration": 0.0015536170003542793
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_worker_recovers_after_rejected_update[second_update1-RuntimeError]",
+      "outcome": "skipped",
+      "duration": 0.001589528000295104
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_worker_recovers_after_rejected_update[second_update2-ValueError]",
+      "outcome": "skipped",
+      "duration": 0.0015725170005680411
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_worker_recovers_after_rejected_update[second_update3-ValueError]",
+      "outcome": "skipped",
+      "duration": 0.0016372979998777737
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_worker_recovers_after_rejected_update[second_update4-ValueError]",
+      "outcome": "skipped",
+      "duration": 0.0015836869997656322
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_modelexpress_worker_can_retry_failed_finish",
+      "outcome": "skipped",
+      "duration": 0.0015957570003592991
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_native_engine_applies_and_releases_exact_versions",
+      "outcome": "skipped",
+      "duration": 0.0015046139997139107
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_vime_init_config_reaches_mx_client",
+      "outcome": "skipped",
+      "duration": 0.0015690969994466286
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_incomplete_storage_config_rejected_before_init[object_storage_type]",
+      "outcome": "skipped",
+      "duration": 0.0014649770000687568
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_incomplete_storage_config_rejected_before_init[initial_base_version_id]",
+      "outcome": "skipped",
+      "duration": 0.0015160149996518157
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_incomplete_storage_config_rejected_before_init[seed_checkpoint_path]",
+      "outcome": "skipped",
+      "duration": 0.0015296159999707015
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_incomplete_storage_config_rejected_before_init[refit_checkpoint_dir]",
+      "outcome": "skipped",
+      "duration": 0.0015433749995281687
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_incomplete_storage_config_rejected_before_init[object_storage_endpoint_url]",
+      "outcome": "skipped",
+      "duration": 0.0015603469992129249
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_incomplete_storage_config_rejected_before_init[object_storage_region_name]",
+      "outcome": "skipped",
+      "duration": 0.0015438959999301005
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_invalid_version_rejected_before_staging[]",
+      "outcome": "skipped",
+      "duration": 0.0015620470003341325
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_invalid_version_rejected_before_staging[   ]",
+      "outcome": "skipped",
+      "duration": 0.0015307050007322687
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_invalid_version_rejected_before_staging[None]",
+      "outcome": "skipped",
+      "duration": 0.001493402999585669
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_invalid_version_rejected_before_staging[1]",
+      "outcome": "skipped",
+      "duration": 0.0015319869999075308
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_update_failure_preserves_error_and_releases_handle[stage]",
+      "outcome": "skipped",
+      "duration": 0.0015614069998264313
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_update_failure_preserves_error_and_releases_handle[apply]",
+      "outcome": "skipped",
+      "duration": 0.0015571659996567178
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_update_failure_preserves_error_and_releases_handle[release]",
+      "outcome": "skipped",
+      "duration": 0.001534785000330885
+    },
+    {
+      "nodeid": "tests/distributed/test_weight_transfer.py::test_plugin_does_not_replace_native_backend",
+      "outcome": "skipped",
+      "duration": 0.0014976539996496285
+    }
+  ],
+  "cuda_initialized_after": true
+}

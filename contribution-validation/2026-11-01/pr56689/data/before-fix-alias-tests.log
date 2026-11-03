@@ -1,0 +1,143 @@
+W1102 07:24:16.685000 37711 .venv/lib/python3.12/site-packages/torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1102 07:24:16.686000 37711 .venv/lib/python3.12/site-packages/torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1102 07:24:16.687000 37711 .venv/lib/python3.12/site-packages/torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+{"head": "fe77d0906be0c38c5e2c575cd61b545a2fa687e4", "tree": "276c1a71f0dab5217e34cf16382d841d1dfa164b", "source": "/home/shadeform/vllm-pr-validation-nov1/base56689", "vllm_import": "/home/shadeform/vllm-pr-validation-nov1/base56689/vllm/__init__.py", "python": "/home/shadeform/vllm-pr-validation-nov1/base56689/.venv/bin/python", "torch": "2.14.0+cu130", "cuda_before": false, "tests": ["/home/shadeform/vllm-pr-validation-nov1/evidence/unchanged-pr56689-tests/test_weight_transfer.py::TestModuleSource"], "argv": ["/home/shadeform/vllm-pr-validation-nov1/scripts/run_cpu_validation.py", "--source", "/home/shadeform/vllm-pr-validation-nov1/base56689", "--head", "fe77d0906be0c38c5e2c575cd61b545a2fa687e4", "--suite", "aliases", "--alias-test", "/home/shadeform/vllm-pr-validation-nov1/evidence/unchanged-pr56689-tests/test_weight_transfer.py", "--expect-alias-failure", "--receipt", "/home/shadeform/vllm-pr-validation-nov1/evidence/base56689-aliases-receipt.json"], "expected_alias_failure": true, "base_py_sha256": "483e5d894d8c76898dfbd9851d5d71a02ff4775d4bc98e9110da2079e82049f6", "test_sha256": "1f6ff7e59762611a78ea6f2be3e7e10613570daa345b585e4ab6b6d8118883e3"}
+/home/shadeform/vllm-pr-validation-nov1/base56689/.venv/lib/python3.12/site-packages/pytest_asyncio/plugin.py:300: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the "fixture" caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to "function" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+Running 5 items in this shard
+.FFFF                                                                    [100%]
+=================================== FAILURES ===================================
+___ TestModuleSource.test_tied_names_are_transferred_each_round[full-False] ____
+
+self = <test_weight_transfer.TestModuleSource object at 0x7fed6f4cf200>
+shared_module = False, mode = 'full'
+
+    @pytest.mark.parametrize("shared_module", [False, True])
+    @pytest.mark.parametrize("mode", ["full", "local"])
+    def test_tied_names_are_transferred_each_round(self, shared_module, mode):
+        """A separate inference stage may require the tied output-head name."""
+        model = torch.nn.Module()
+        model.model = torch.nn.Module()
+        model.model.embed_tokens = _module_with(("weight", torch.zeros(3, 2)))
+        if shared_module:
+            model.lm_head = model.model.embed_tokens
+        else:
+            model.lm_head = torch.nn.Module()
+            model.lm_head.register_parameter("weight", model.model.embed_tokens.weight)
+        source = ModuleSource(model)
+        names = ["model.embed_tokens.weight", "lm_head.weight"]
+    
+        for value in (1.0, 2.0):
+            model.model.embed_tokens.weight.data.fill_(value)
+>           assert source.metadata == [
+                ParamMeta(name, torch.float32, (3, 2)) for name in names
+            ]
+E           AssertionError: assert [ParamMeta(na...cements=None)] == [ParamMeta(na...cements=None)]
+E             
+E             Right contains one more item: ParamMeta(name='lm_head.weight', dtype=torch.float32, shape=(3, 2), owners=None, mesh_shape=None, placements=None)
+E             Use -v to get more diff
+
+../evidence/unchanged-pr56689-tests/test_weight_transfer.py:1397: AssertionError
+____ TestModuleSource.test_tied_names_are_transferred_each_round[full-True] ____
+
+self = <test_weight_transfer.TestModuleSource object at 0x7fed6f4cffe0>
+shared_module = True, mode = 'full'
+
+    @pytest.mark.parametrize("shared_module", [False, True])
+    @pytest.mark.parametrize("mode", ["full", "local"])
+    def test_tied_names_are_transferred_each_round(self, shared_module, mode):
+        """A separate inference stage may require the tied output-head name."""
+        model = torch.nn.Module()
+        model.model = torch.nn.Module()
+        model.model.embed_tokens = _module_with(("weight", torch.zeros(3, 2)))
+        if shared_module:
+            model.lm_head = model.model.embed_tokens
+        else:
+            model.lm_head = torch.nn.Module()
+            model.lm_head.register_parameter("weight", model.model.embed_tokens.weight)
+        source = ModuleSource(model)
+        names = ["model.embed_tokens.weight", "lm_head.weight"]
+    
+        for value in (1.0, 2.0):
+            model.model.embed_tokens.weight.data.fill_(value)
+>           assert source.metadata == [
+                ParamMeta(name, torch.float32, (3, 2)) for name in names
+            ]
+E           AssertionError: assert [ParamMeta(na...cements=None)] == [ParamMeta(na...cements=None)]
+E             
+E             Right contains one more item: ParamMeta(name='lm_head.weight', dtype=torch.float32, shape=(3, 2), owners=None, mesh_shape=None, placements=None)
+E             Use -v to get more diff
+
+../evidence/unchanged-pr56689-tests/test_weight_transfer.py:1397: AssertionError
+___ TestModuleSource.test_tied_names_are_transferred_each_round[local-False] ___
+
+self = <test_weight_transfer.TestModuleSource object at 0x7fed6f4aff50>
+shared_module = False, mode = 'local'
+
+    @pytest.mark.parametrize("shared_module", [False, True])
+    @pytest.mark.parametrize("mode", ["full", "local"])
+    def test_tied_names_are_transferred_each_round(self, shared_module, mode):
+        """A separate inference stage may require the tied output-head name."""
+        model = torch.nn.Module()
+        model.model = torch.nn.Module()
+        model.model.embed_tokens = _module_with(("weight", torch.zeros(3, 2)))
+        if shared_module:
+            model.lm_head = model.model.embed_tokens
+        else:
+            model.lm_head = torch.nn.Module()
+            model.lm_head.register_parameter("weight", model.model.embed_tokens.weight)
+        source = ModuleSource(model)
+        names = ["model.embed_tokens.weight", "lm_head.weight"]
+    
+        for value in (1.0, 2.0):
+            model.model.embed_tokens.weight.data.fill_(value)
+>           assert source.metadata == [
+                ParamMeta(name, torch.float32, (3, 2)) for name in names
+            ]
+E           AssertionError: assert [ParamMeta(na...cements=None)] == [ParamMeta(na...cements=None)]
+E             
+E             Right contains one more item: ParamMeta(name='lm_head.weight', dtype=torch.float32, shape=(3, 2), owners=None, mesh_shape=None, placements=None)
+E             Use -v to get more diff
+
+../evidence/unchanged-pr56689-tests/test_weight_transfer.py:1397: AssertionError
+___ TestModuleSource.test_tied_names_are_transferred_each_round[local-True] ____
+
+self = <test_weight_transfer.TestModuleSource object at 0x7fed6f4addc0>
+shared_module = True, mode = 'local'
+
+    @pytest.mark.parametrize("shared_module", [False, True])
+    @pytest.mark.parametrize("mode", ["full", "local"])
+    def test_tied_names_are_transferred_each_round(self, shared_module, mode):
+        """A separate inference stage may require the tied output-head name."""
+        model = torch.nn.Module()
+        model.model = torch.nn.Module()
+        model.model.embed_tokens = _module_with(("weight", torch.zeros(3, 2)))
+        if shared_module:
+            model.lm_head = model.model.embed_tokens
+        else:
+            model.lm_head = torch.nn.Module()
+            model.lm_head.register_parameter("weight", model.model.embed_tokens.weight)
+        source = ModuleSource(model)
+        names = ["model.embed_tokens.weight", "lm_head.weight"]
+    
+        for value in (1.0, 2.0):
+            model.model.embed_tokens.weight.data.fill_(value)
+>           assert source.metadata == [
+                ParamMeta(name, torch.float32, (3, 2)) for name in names
+            ]
+E           AssertionError: assert [ParamMeta(na...cements=None)] == [ParamMeta(na...cements=None)]
+E             
+E             Right contains one more item: ParamMeta(name='lm_head.weight', dtype=torch.float32, shape=(3, 2), owners=None, mesh_shape=None, placements=None)
+E             Use -v to get more diff
+
+../evidence/unchanged-pr56689-tests/test_weight_transfer.py:1397: AssertionError
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/_pytest/config/__init__.py:1507
+  /home/shadeform/vllm-pr-validation-nov1/base56689/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py:1507: PytestAssertRewriteWarning: Module already imported so cannot be rewritten; anyio
+    self._mark_plugins_for_rewrite(hook, disable_autoload)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+4 failed, 1 passed, 1 warning in 3.45s
+Confirmed: all four unchanged alias regressions fail against the unmodified base.

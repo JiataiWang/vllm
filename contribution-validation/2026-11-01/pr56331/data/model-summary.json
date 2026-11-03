@@ -1,0 +1,296 @@
+{
+  "status": "passed",
+  "source_head": "ba29c63bbaa130128268b9b65c0a0e4cfd85a38f",
+  "source_tree": "852ce8296e1c0399bb970a383a0c1fb299443203",
+  "driver_sha256": "5ae62577621341e84aa2e34d277d3ad441a30afb42c1154304d9e45a8cfd5bda",
+  "runs": {
+    "A_clean_control": {
+      "command": [
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331/.venv/bin/python",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/validate_fs_rope.py",
+        "--child",
+        "--source",
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331",
+        "--model",
+        "/home/shadeform/vllm-pr-validation-nov1/models/Qwen3-0.6B-c1899de",
+        "--model-manifest",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/model-revision-manifest.json",
+        "--output",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2",
+        "--gpu",
+        "7",
+        "--factor",
+        "1.0",
+        "--cache-root",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/clean-A",
+        "--result",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/A_clean_control.json"
+      ],
+      "pid": 32124,
+      "returncode": 0,
+      "elapsed_seconds": 137.46625146000042
+    },
+    "B_clean_control": {
+      "command": [
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331/.venv/bin/python",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/validate_fs_rope.py",
+        "--child",
+        "--source",
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331",
+        "--model",
+        "/home/shadeform/vllm-pr-validation-nov1/models/Qwen3-0.6B-c1899de",
+        "--model-manifest",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/model-revision-manifest.json",
+        "--output",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2",
+        "--gpu",
+        "7",
+        "--factor",
+        "2.0",
+        "--cache-root",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/clean-B",
+        "--result",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/B_clean_control.json"
+      ],
+      "pid": 35698,
+      "returncode": 0,
+      "elapsed_seconds": 157.27546256799997
+    },
+    "A_shared_cold": {
+      "command": [
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331/.venv/bin/python",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/validate_fs_rope.py",
+        "--child",
+        "--source",
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331",
+        "--model",
+        "/home/shadeform/vllm-pr-validation-nov1/models/Qwen3-0.6B-c1899de",
+        "--model-manifest",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/model-revision-manifest.json",
+        "--output",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2",
+        "--gpu",
+        "7",
+        "--factor",
+        "1.0",
+        "--cache-root",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/shared",
+        "--result",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/A_shared_cold.json"
+      ],
+      "pid": 39097,
+      "returncode": 0,
+      "elapsed_seconds": 164.66147890999991
+    },
+    "A_shared_restart": {
+      "command": [
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331/.venv/bin/python",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/validate_fs_rope.py",
+        "--child",
+        "--source",
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331",
+        "--model",
+        "/home/shadeform/vllm-pr-validation-nov1/models/Qwen3-0.6B-c1899de",
+        "--model-manifest",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/model-revision-manifest.json",
+        "--output",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2",
+        "--gpu",
+        "7",
+        "--factor",
+        "1.0",
+        "--cache-root",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/shared",
+        "--result",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/A_shared_restart.json"
+      ],
+      "pid": 41029,
+      "returncode": 0,
+      "elapsed_seconds": 56.76278381100019
+    },
+    "B_shared_isolation": {
+      "command": [
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331/.venv/bin/python",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/validate_fs_rope.py",
+        "--child",
+        "--source",
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331",
+        "--model",
+        "/home/shadeform/vllm-pr-validation-nov1/models/Qwen3-0.6B-c1899de",
+        "--model-manifest",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/model-revision-manifest.json",
+        "--output",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2",
+        "--gpu",
+        "7",
+        "--factor",
+        "2.0",
+        "--cache-root",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/shared",
+        "--result",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/B_shared_isolation.json"
+      ],
+      "pid": 41955,
+      "returncode": 0,
+      "elapsed_seconds": 50.892744672999925
+    },
+    "B_shared_restart": {
+      "command": [
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331/.venv/bin/python",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/validate_fs_rope.py",
+        "--child",
+        "--source",
+        "/home/shadeform/vllm-pr-validation-nov1/pr56331",
+        "--model",
+        "/home/shadeform/vllm-pr-validation-nov1/models/Qwen3-0.6B-c1899de",
+        "--model-manifest",
+        "/home/shadeform/vllm-pr-validation-nov1/scripts/model-revision-manifest.json",
+        "--output",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2",
+        "--gpu",
+        "7",
+        "--factor",
+        "2.0",
+        "--cache-root",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/shared",
+        "--result",
+        "/home/shadeform/vllm-pr-validation-nov1/evidence/pr56331-fs-attempt2/B_shared_restart.json"
+      ],
+      "pid": 42838,
+      "returncode": 0,
+      "elapsed_seconds": 49.33742638700005
+    }
+  },
+  "comparisons": {
+    "A_shared_cold": {
+      "same_prompt_ids": true,
+      "same_token_ids": true,
+      "same_all_captured_logprobs": true,
+      "same_cumulative_logprob": true
+    },
+    "A_shared_restart": {
+      "same_prompt_ids": true,
+      "same_token_ids": true,
+      "same_all_captured_logprobs": true,
+      "same_cumulative_logprob": true
+    },
+    "B_shared_isolation": {
+      "same_prompt_ids": true,
+      "same_token_ids": true,
+      "same_all_captured_logprobs": true,
+      "same_cumulative_logprob": true
+    },
+    "B_shared_restart": {
+      "same_prompt_ids": true,
+      "same_token_ids": true,
+      "same_all_captured_logprobs": true,
+      "same_cumulative_logprob": true
+    }
+  },
+  "fs_reads": {
+    "A_clean_control": null,
+    "B_clean_control": null,
+    "A_shared_cold": null,
+    "A_shared_restart": 133955584,
+    "B_shared_isolation": null,
+    "B_shared_restart": 133955584
+  },
+  "namespace_configs": {
+    "_home_shadeform_vllm-pr-validation-nov1_models_Qwen3-0.6B-c1899de_c723d44637da/config.json": {
+      "blocks_per_file": 1,
+      "dcp_size": 1,
+      "dtype": "bfloat16",
+      "inference_engine": "vllm",
+      "kv_cache_groups": [
+        {
+          "layer_names": [
+            "model.layers.0.self_attn.attn",
+            "model.layers.1.self_attn.attn",
+            "model.layers.2.self_attn.attn",
+            "model.layers.3.self_attn.attn",
+            "model.layers.4.self_attn.attn",
+            "model.layers.5.self_attn.attn",
+            "model.layers.6.self_attn.attn",
+            "model.layers.7.self_attn.attn",
+            "model.layers.8.self_attn.attn",
+            "model.layers.9.self_attn.attn",
+            "model.layers.10.self_attn.attn",
+            "model.layers.11.self_attn.attn",
+            "model.layers.12.self_attn.attn",
+            "model.layers.13.self_attn.attn",
+            "model.layers.14.self_attn.attn",
+            "model.layers.15.self_attn.attn",
+            "model.layers.16.self_attn.attn",
+            "model.layers.17.self_attn.attn",
+            "model.layers.18.self_attn.attn",
+            "model.layers.19.self_attn.attn",
+            "model.layers.20.self_attn.attn",
+            "model.layers.21.self_attn.attn",
+            "model.layers.22.self_attn.attn",
+            "model.layers.23.self_attn.attn",
+            "model.layers.24.self_attn.attn",
+            "model.layers.25.self_attn.attn",
+            "model.layers.26.self_attn.attn",
+            "model.layers.27.self_attn.attn"
+          ],
+          "tokens_per_block": 16
+        }
+      ],
+      "model_config_hash": "1122bc2639a7f051e71436bb683dd152dbc17feaf8ac0391d35ae939e9fb5c75",
+      "model_name": "/home/shadeform/vllm-pr-validation-nov1/models/Qwen3-0.6B-c1899de",
+      "parallel_agnostic": false,
+      "pcp_size": 1,
+      "pp_size": 1,
+      "tokens_per_hash": 16,
+      "tp_size": 1
+    },
+    "_home_shadeform_vllm-pr-validation-nov1_models_Qwen3-0.6B-c1899de_dc286651df89/config.json": {
+      "blocks_per_file": 1,
+      "dcp_size": 1,
+      "dtype": "bfloat16",
+      "inference_engine": "vllm",
+      "kv_cache_groups": [
+        {
+          "layer_names": [
+            "model.layers.0.self_attn.attn",
+            "model.layers.1.self_attn.attn",
+            "model.layers.2.self_attn.attn",
+            "model.layers.3.self_attn.attn",
+            "model.layers.4.self_attn.attn",
+            "model.layers.5.self_attn.attn",
+            "model.layers.6.self_attn.attn",
+            "model.layers.7.self_attn.attn",
+            "model.layers.8.self_attn.attn",
+            "model.layers.9.self_attn.attn",
+            "model.layers.10.self_attn.attn",
+            "model.layers.11.self_attn.attn",
+            "model.layers.12.self_attn.attn",
+            "model.layers.13.self_attn.attn",
+            "model.layers.14.self_attn.attn",
+            "model.layers.15.self_attn.attn",
+            "model.layers.16.self_attn.attn",
+            "model.layers.17.self_attn.attn",
+            "model.layers.18.self_attn.attn",
+            "model.layers.19.self_attn.attn",
+            "model.layers.20.self_attn.attn",
+            "model.layers.21.self_attn.attn",
+            "model.layers.22.self_attn.attn",
+            "model.layers.23.self_attn.attn",
+            "model.layers.24.self_attn.attn",
+            "model.layers.25.self_attn.attn",
+            "model.layers.26.self_attn.attn",
+            "model.layers.27.self_attn.attn"
+          ],
+          "tokens_per_block": 16
+        }
+      ],
+      "model_config_hash": "28ca4e748121974141e84182ce2bcf8823b5a648bcf55ebad6dfa69dd4885151",
+      "model_name": "/home/shadeform/vllm-pr-validation-nov1/models/Qwen3-0.6B-c1899de",
+      "parallel_agnostic": false,
+      "pcp_size": 1,
+      "pp_size": 1,
+      "tokens_per_hash": 16,
+      "tp_size": 1
+    }
+  }
+}
